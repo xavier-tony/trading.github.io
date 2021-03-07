@@ -1,0 +1,17 @@
+<mat-tab-group color="primary" [@.disabled]="true">
+  <mat-tab
+    *ngFor="let trade of trade$ | async; let i = index; trackBy: trackByTrade"
+  >
+    <ng-template mat-tab-label
+      ><div class="tab-header">
+        {{ trade.code }}
+      </div></ng-template
+    >
+    <div class="stocks">
+      <money-stocks-grid
+        [stocks]="trade.stocks"
+        [displayedColumns]="displayedColumns"
+      ></money-stocks-grid>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,74 @@
+<mat-table
+  [dataSource]="dataSource"
+  class="stocks__grid"
+  [trackBy]="trackByStock"
+  matSort
+>
+  <ng-container matColumnDef="ticker">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>
+      TICKER
+    </mat-header-cell>
+    <mat-cell class="grid__ticker" *matCellDef="let row">
+      <div>{{ row.ticker }}</div>
+      <div class="grid-ticker__count">{{ row.count }}</div>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="cost">
+    <mat-header-cell mat-sort-header *matHeaderCellDef> COST </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{ row.cost }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="lastPrice">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>
+      LAST PRICE
+    </mat-header-cell>
+    <mat-cell
+      *matCellDef="let row"
+      [class.green]="row.isProfit"
+      [class.red]="!row.isProfit"
+    >
+      {{ row.lastPrice }} ({{ row.perShareProfit }})
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="profit">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>
+      PROFIT/LOSS
+    </mat-header-cell>
+    <mat-cell
+      *matCellDef="let row"
+      [class.green]="row.isProfit"
+      [class.red]="!row.isProfit"
+    >
+      {{ row.profit }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Buy/Sell">
+    <mat-header-cell *matHeaderCellDef> BUY/SELL </mat-header-cell>
+    <mat-cell
+      *matCellDef="let row"
+      [class.green]="row.lastPrice > row.min"
+      [class.red]="row.lastPrice < row.cost"
+    >
+      {{ row.lastPrice < row.cost ? 'Average' : 'Sell off/Hold' }}
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="min">
+    <mat-header-cell *matHeaderCellDef> MIN </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{ row.min }} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="max">
+    <mat-header-cell *matHeaderCellDef> MAX </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{ row.max }} </mat-cell>
+  </ng-container>
+
+  <mat-header-row
+    class="stocks-grid__header"
+    *matHeaderRowDef="displayedColumns; sticky: true"
+  ></mat-header-row>
+  <mat-row
+    class="stocks-grid__row"
+    *matRowDef="let row; columns: displayedColumns"
+  ></mat-row>
+</mat-table>

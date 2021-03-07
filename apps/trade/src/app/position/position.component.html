@@ -1,0 +1,36 @@
+
+
+<div class="ticker">
+  <div class="ticker-name">
+    {{ stock.ticker }}
+  </div>
+
+  <div
+    class="last"
+    [class.red]="stock.position && stock.lastPrice < stock.cost"
+    [class.green]="stock.position && stock.lastPrice > stock.cost"
+  >
+    ${{ stock.lastPrice }}
+  </div>
+</div>
+<div class="stock__body">
+  <div class="count">Count: {{ stock.count }}</div>
+  <div class="cost">Cost: {{ stock.cost }}</div>
+  <div class="min">Min: {{ stock.min }}</div>
+  <div class="max">Max: {{ stock.max }}</div>
+</div>
+<div class="indicator" *ngIf="stock.min && stock.max">
+  <money-buysellprogress
+    [min]="stock.min"
+    [max]="stock.max"
+    [value]="stock.lastPrice"
+  ></money-buysellprogress>
+</div>
+<div class="actions">
+  <button *ngIf="stock.min && stock.lastPrice <= stock.min" class="buy">
+    Buy @ {{ stock.lastPrice }}
+  </button>
+  <button class="sell" *ngIf="stock.max && stock.lastPrice >= stock.max">
+    Sell
+  </button>
+</div>

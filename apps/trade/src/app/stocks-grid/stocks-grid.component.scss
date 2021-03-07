@@ -1,0 +1,35 @@
+:host {
+  flex: 1;
+  display: flex;
+  .stocks__grid {
+    flex: 1;
+    height: 800px;
+    .stocks-grid__row:not(.example-expanded-row):hover {
+      background: whitesmoke;
+    }
+
+    .stocks-grid__row:not(.example-expanded-row):active {
+      background: #efefef;
+    }
+
+    .grid__ticker {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      .grid-ticker__count {
+        font-size: 0.8rem;
+        color: #a5a2a2;
+        align-items: flex-start;
+      }
+    }
+
+    .stocks-grid__header {
+      background: linear-gradient(#f1f1f1, #fff);
+      font-family: 'Roboto Condensed', sans-serif;
+      .mat-header-cell {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

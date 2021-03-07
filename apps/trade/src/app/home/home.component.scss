@@ -1,0 +1,70 @@
+.tab-header {
+  font-size: 1rem;
+  font-family: 'Roboto Condensed';
+}
+
+::ng-deep .mat-ink-bar {
+  background-color: #00c805 !important;
+}
+
+::ng-deep .mat-tab-label-active {
+  background-color: #00c805;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.stocks {
+  display: flex;
+  flex-wrap: wrap;
+  ::ng-deep .stock {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: 5px;
+    min-width: 150px;
+
+    .stock__body {
+      padding: 10px;
+      div {
+        padding: 5px 0;
+      }
+    }
+
+    .ticker {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-bottom: 1px solid #eee;
+      padding: 10px;
+      .ticker-name {
+        font-weight: 500;
+        font-size: 1.3rem;
+        flex: 1;
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .buy {
+        color: #fff;
+        background: #00c805;
+        border: darkgreen;
+        text-shadow: darkgreen;
+        border-radius: 5px;
+        padding: 8px 10px;
+        margin: 10px;
+      }
+      .sell {
+        color: #fff;
+        background: #ff5000;
+        border: darkred;
+        text-shadow: darkred;
+        border-radius: 5px;
+        padding: 8px 10px;
+        margin: 10px;
+      }
+    }
+  }
+}
