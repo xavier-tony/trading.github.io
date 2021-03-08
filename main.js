@@ -793,9 +793,11 @@ class HomeComponent {
             return _stocks_json__WEBPACK_IMPORTED_MODULE_3__["trade"].map((tr) => (Object.assign(Object.assign({}, tr), { stocks: tr.stocks.map((st) => (Object.assign(Object.assign({}, st), Array.from(Object.values(s)).find((s) => s.symbol === st.ticker)))) })));
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])((trade) => trade.map((tr) => (Object.assign(Object.assign({}, tr), { stocks: tr.stocks
                 .map((s) => (Object.assign(Object.assign({}, s), { perShareProfit: (s.lastPrice - s.cost).toFixed(s.lastPrice < 0.01 ? 5 : 2), isProfit: s.lastPrice - s.cost > 0, profit: ((s.lastPrice - s.cost) * s.count).toFixed(2), adjustShares: s.adjustRate
-                    ? this.stocksService.howManySharesToAverage(s, s.adjustRate).toFixed(2)
+                    ? this.stocksService
+                        .howManySharesToAverage(s, s.adjustRate)
+                        .toFixed(2)
                     : null })))
-                .sort((s1, s2) => +s2.profit - +s1.profit) })))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(console.log), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(() => {
+                .sort((s1, s2) => +s2.profit - +s1.profit) })))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(() => (this.loading = false)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(() => {
             this.loading = false;
             alert('ERROR');
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(null);
