@@ -11,7 +11,7 @@ import {
   Input,
   ViewChild,
   AfterViewInit,
-  OnInit,
+  OnChanges,
 } from '@angular/core';
 import { IStock } from '../home/trade.interface';
 import { MatSort } from '@angular/material/sort';
@@ -33,17 +33,18 @@ import { MatTableDataSource } from '@angular/material/table';
     ]),
   ],
 })
-export class StocksGridComponent implements AfterViewInit, OnInit {
+export class StocksGridComponent implements AfterViewInit, OnChanges {
   @Input() displayedColumns: string[];
   @Input() stocks: IStock[];
   @ViewChild(MatSort) sort: MatSort;
   dataSource;
-  ngOnInit(): void {
-    this.dataSource = new MatTableDataSource(this.stocks);
-  }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
+  }
+
+  ngOnChanges() {
+    this.dataSource = new MatTableDataSource(this.stocks);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

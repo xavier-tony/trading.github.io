@@ -23,6 +23,7 @@
           "min": 7.6,
           "position": true,
           "expires": "03/12/2021",
+          "adjustRate": 9.5,
           "events": []
         },
         {
@@ -127,7 +128,8 @@
           "count": 150000,
           "max": null,
           "min": null,
-          "position": true
+          "position": true,
+          "adjustRate": 0.003
         },
         {
           "ticker": "JAGX",
@@ -159,7 +161,8 @@
           "count": 20,
           "max": null,
           "min": null,
-          "position": true
+          "position": true,
+          "adjustRate": 45
         },
         {
           "ticker": "SAVA",
@@ -167,7 +170,8 @@
           "count": 60,
           "max": null,
           "min": null,
-          "position": true
+          "position": true,
+          "adjustRate": 50
         },
         {
           "ticker": "SENS",
@@ -231,7 +235,8 @@
           "count": 3600,
           "max": null,
           "min": null,
-          "position": true
+          "position": true,
+          "adjustRate": 2.2
         },
         {
           "ticker": "ZSAN",
@@ -239,7 +244,8 @@
           "count": 200,
           "max": null,
           "min": null,
-          "position": true
+          "position": true,
+          "adjustRate": 1.5
         }
       ]
     },
@@ -460,6 +466,7 @@
           "min": null,
           "position": true,
           "expires": null,
+          "adjustRate": 25,
           "events": []
         }
       ]
@@ -477,6 +484,7 @@
           "min": null,
           "position": true,
           "expires": null,
+          "adjustRate": 40,
           "events": []
         },
         {
@@ -486,6 +494,7 @@
           "max": null,
           "min": null,
           "position": true,
+          "adjustRate": 8,
           "expires": null,
           "events": []
         },
@@ -497,6 +506,7 @@
           "min": null,
           "position": true,
           "expires": null,
+          "adjustRate": 23,
           "events": []
         },
         {
@@ -600,6 +610,14 @@
       "owner": "TONY",
       "code": "WA_TX",
       "stocks": [
+        {
+          "ticker": "ATOS",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": false
+        },
         {
           "ticker": "ORLA",
           "cost": null,
@@ -796,6 +814,74 @@
           "min": null,
           "longterm": true,
           "position": false
+        },
+        {
+          "ticker": "WKHS",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "longterm": true,
+          "position": false
+        },
+        {
+          "ticker": "CRWD",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "longterm": true,
+          "position": false
+        },
+        {
+          "ticker": "FSR",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "longterm": true,
+          "position": false,
+          "tags": ["ev"]
+        },
+        {
+          "ticker": "GE",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "longterm": true,
+          "position": false,
+          "tags": ["sain"]
+        },
+        {
+          "ticker": "MESA",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "longterm": true,
+          "position": false,
+          "tags": ["sain"]
+        },
+        {
+          "ticker": "F",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "longterm": true,
+          "position": false,
+          "tags": ["sain"]
+        },
+        {
+          "ticker": "CRWD",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "longterm": true,
+          "position": false,
+          "tags": ["sain"]
         }
       ]
     }

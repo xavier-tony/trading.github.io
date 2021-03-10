@@ -11,6 +11,7 @@ import {
   tap,
 } from 'rxjs/operators';
 import { trade } from '../stocks.json';
+import { StocksService } from '../stocks.service';
 import { IResponse, IStock, ITrade } from './trade.interface';
 
 @Component({
@@ -25,16 +26,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = [
     'ticker',
     'cost',
+    'totalcost',
     'lastPrice',
     'profit',
     'Buy/Sell',
     'min',
     'max',
+    'adjustShares',
   ];
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private stocksService: StocksService) {}
 
   ngOnInit() {
-    this.trade$ = timer(1, 5000).pipe(
+    this.trade$ = timer(1, 2000).pipe(
       switchMap(() => this.getStocks(this.getTickers(trade))),
       retry(),
       share(),
@@ -92,14 +95,20 @@ export class HomeComponent implements OnInit, OnDestroy {
                 ),
                 isProfit: s.lastPrice - s.cost > 0,
                 profit: ((s.lastPrice - s.cost) * s.count).toFixed(2),
+                adjustShares: s.adjustRate
+                  ? this.stocksService
+                      .howManySharesToAverage(s, s.adjustRate)
+                      .toFixed(2)
+                  : null,
+                totalCost : (s.cost * s.count).toFixed(2)
               }))
               .sort((s1, s2) => +s2.profit - +s1.profit),
           }))
         ),
         tap(() => (this.loading = false)),
-        catchError(() => {
+        catchError((e) => {
           this.loading = false;
-          alert('ERROR');
+          console.error(e);
           return of(null);
         })
       );

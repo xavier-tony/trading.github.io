@@ -15,6 +15,9 @@ import { StocksGridComponent } from './stocks-grid/stocks-grid.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSortModule } from '@angular/material/sort';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,9 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatProgressSpinnerModule,
     MatSortModule,
+    MatBadgeModule,
+    MatChipsModule,
+    MatButtonToggleModule,
   ],
   exports: [BrowserAnimationsModule],
   bootstrap: [AppComponent],

@@ -22,6 +22,8 @@ export interface IStock {
   perShareProfit?: number;
   profit?: number;
   isProfit?: boolean;
+  adjustRate?: number;
+  adjustShares?: number;
   expires?: string;
   earnings?: string;
   events?: IEvent[];

@@ -18,6 +18,13 @@
     <mat-cell *matCellDef="let row"> {{ row.cost }} </mat-cell>
   </ng-container>
 
+  <ng-container matColumnDef="totalcost">
+    <mat-header-cell mat-sort-header *matHeaderCellDef>
+      TOTAL COST
+    </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{ row.totalCost }} </mat-cell>
+  </ng-container>
+
   <ng-container matColumnDef="lastPrice">
     <mat-header-cell *matHeaderCellDef mat-sort-header>
       LAST PRICE
@@ -61,6 +68,19 @@
   <ng-container matColumnDef="max">
     <mat-header-cell *matHeaderCellDef> MAX </mat-header-cell>
     <mat-cell *matCellDef="let row"> {{ row.max }} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="adjustShares">
+    <mat-header-cell *matHeaderCellDef> Adjust Shares </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      
+      <mat-chip-list *ngIf="row.adjustRate">
+        <mat-chip color="primary" selected>{{ row.adjustRate }}</mat-chip>
+        <mat-chip color="accent" selected>{{ row.adjustShares }}</mat-chip>
+        <mat-chip color="warn" selected>{{
+          (row.adjustShares * row.adjustRate)|currency
+        }}</mat-chip>
+      </mat-chip-list>
+    </mat-cell>
   </ng-container>
 
   <mat-header-row
