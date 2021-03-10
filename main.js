@@ -65,7 +65,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/sort */ "Dh3D");
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_badge__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/badge */ "TU8p");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/chips */ "A5z7");
+
 
 
 
@@ -74,28 +76,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function StocksGridComponent_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " TICKER ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
 function StocksGridComponent_mat_cell_3_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-cell", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-cell", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r18 = ctx.$implicit;
+    const row_r20 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](row_r18.ticker);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](row_r20.ticker);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](row_r18.count);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](row_r20.count);
 } }
 function StocksGridComponent_mat_header_cell_5_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " COST ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
@@ -104,13 +106,13 @@ function StocksGridComponent_mat_cell_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r19 = ctx.$implicit;
+    const row_r21 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r19.cost, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r21.cost, " ");
 } }
 function StocksGridComponent_mat_header_cell_8_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " LAST PRICE ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " TOTAL COST ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
 function StocksGridComponent_mat_cell_9_Template(rf, ctx) { if (rf & 1) {
@@ -118,14 +120,13 @@ function StocksGridComponent_mat_cell_9_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r20 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("green", row_r20.isProfit)("red", !row_r20.isProfit);
+    const row_r22 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate2"](" ", row_r20.lastPrice, " (", row_r20.perShareProfit, ") ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r22.totalCost, " ");
 } }
 function StocksGridComponent_mat_header_cell_11_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " PROFIT/LOSS ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " LAST PRICE ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
 function StocksGridComponent_mat_cell_12_Template(rf, ctx) { if (rf & 1) {
@@ -133,14 +134,14 @@ function StocksGridComponent_mat_cell_12_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r21 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("green", row_r21.isProfit)("red", !row_r21.isProfit);
+    const row_r23 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("green", row_r23.isProfit)("red", !row_r23.isProfit);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r21.profit, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate2"](" ", row_r23.lastPrice, " (", row_r23.perShareProfit, ") ");
 } }
 function StocksGridComponent_mat_header_cell_14_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " BUY/SELL ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " PROFIT/LOSS ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
 function StocksGridComponent_mat_cell_15_Template(rf, ctx) { if (rf & 1) {
@@ -148,14 +149,14 @@ function StocksGridComponent_mat_cell_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r22 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("green", row_r22.lastPrice > row_r22.min)("red", row_r22.lastPrice < row_r22.cost);
+    const row_r24 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("green", row_r24.isProfit)("red", !row_r24.isProfit);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r22.lastPrice < row_r22.cost ? "Average" : "Sell off/Hold", " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r24.profit, " ");
 } }
 function StocksGridComponent_mat_header_cell_17_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " MIN ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " BUY/SELL ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
 function StocksGridComponent_mat_cell_18_Template(rf, ctx) { if (rf & 1) {
@@ -163,13 +164,14 @@ function StocksGridComponent_mat_cell_18_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r23 = ctx.$implicit;
+    const row_r25 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassProp"]("green", row_r25.lastPrice > row_r25.min)("red", row_r25.lastPrice < row_r25.cost);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r23.min, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r25.lastPrice < row_r25.cost ? "Average" : "Sell off/Hold", " ");
 } }
 function StocksGridComponent_mat_header_cell_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " MAX ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " MIN ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
 function StocksGridComponent_mat_cell_21_Template(rf, ctx) { if (rf & 1) {
@@ -177,44 +179,76 @@ function StocksGridComponent_mat_cell_21_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r24 = ctx.$implicit;
+    const row_r26 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r24.max, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r26.min, " ");
 } }
 function StocksGridComponent_mat_header_cell_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " Adjust Shares ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " MAX ");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
 function StocksGridComponent_mat_cell_24_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-cell");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "span", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const row_r27 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", row_r27.max, " ");
+} }
+function StocksGridComponent_mat_header_cell_26_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-header-cell");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, " Adjust Shares ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+} }
+function StocksGridComponent_mat_cell_27_mat_chip_list_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-chip-list");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "mat-chip", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "mat-chip", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "mat-chip", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipe"](7, "currency");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r25 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("matBadge", row_r25.adjustRate);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](row_r25.adjustShares);
+    const row_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](row_r28.adjustRate);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](row_r28.adjustShares);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpipeBind1"](7, 3, row_r28.adjustShares * row_r28.adjustRate));
 } }
-function StocksGridComponent_mat_header_row_25_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "mat-header-row", 20);
+function StocksGridComponent_mat_cell_27_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-cell");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](1, StocksGridComponent_mat_cell_27_mat_chip_list_1_Template, 8, 5, "mat-chip-list", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const row_r28 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", row_r28.adjustRate);
 } }
-function StocksGridComponent_mat_row_26_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "mat-row", 21);
+function StocksGridComponent_mat_header_row_28_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "mat-header-row", 24);
+} }
+function StocksGridComponent_mat_row_29_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "mat-row", 25);
 } }
 class StocksGridComponent {
     constructor() {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         this.trackByStock = (index, stock) => index;
     }
-    ngOnInit() {
-        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.stocks);
-    }
     ngAfterViewInit() {
         this.dataSource.sort = this.sort;
+    }
+    ngOnChanges() {
+        this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.stocks);
     }
 }
 StocksGridComponent.ɵfac = function StocksGridComponent_Factory(t) { return new (t || StocksGridComponent)(); };
@@ -223,7 +257,7 @@ StocksGridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefi
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.sort = _t.first);
-    } }, inputs: { displayedColumns: "displayedColumns", stocks: "stocks" }, decls: 27, vars: 5, consts: [["matSort", "", 1, "stocks__grid", 3, "dataSource", "trackBy"], ["matColumnDef", "ticker"], ["mat-sort-header", "", 4, "matHeaderCellDef"], ["class", "grid__ticker", 4, "matCellDef"], ["matColumnDef", "cost"], [4, "matCellDef"], ["matColumnDef", "lastPrice"], [3, "green", "red", 4, "matCellDef"], ["matColumnDef", "profit"], ["matColumnDef", "Buy/Sell"], [4, "matHeaderCellDef"], ["matColumnDef", "min"], ["matColumnDef", "max"], ["matColumnDef", "adjustShares"], ["class", "stocks-grid__header", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["class", "stocks-grid__row", 4, "matRowDef", "matRowDefColumns"], ["mat-sort-header", ""], [1, "grid__ticker"], [1, "grid-ticker__count"], ["matBadgeOverlap", "false", 3, "matBadge"], [1, "stocks-grid__header"], [1, "stocks-grid__row"]], template: function StocksGridComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { displayedColumns: "displayedColumns", stocks: "stocks" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵNgOnChangesFeature"]], decls: 30, vars: 5, consts: [["matSort", "", 1, "stocks__grid", 3, "dataSource", "trackBy"], ["matColumnDef", "ticker"], ["mat-sort-header", "", 4, "matHeaderCellDef"], ["class", "grid__ticker", 4, "matCellDef"], ["matColumnDef", "cost"], [4, "matCellDef"], ["matColumnDef", "totalcost"], ["matColumnDef", "lastPrice"], [3, "green", "red", 4, "matCellDef"], ["matColumnDef", "profit"], ["matColumnDef", "Buy/Sell"], [4, "matHeaderCellDef"], ["matColumnDef", "min"], ["matColumnDef", "max"], ["matColumnDef", "adjustShares"], ["class", "stocks-grid__header", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["class", "stocks-grid__row", 4, "matRowDef", "matRowDefColumns"], ["mat-sort-header", ""], [1, "grid__ticker"], [1, "grid-ticker__count"], [4, "ngIf"], ["color", "primary", "selected", ""], ["color", "accent", "selected", ""], ["color", "warn", "selected", ""], [1, "stocks-grid__header"], [1, "stocks-grid__row"]], template: function StocksGridComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "mat-table", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](1, 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](2, StocksGridComponent_mat_header_cell_2_Template, 2, 0, "mat-header-cell", 2);
@@ -235,38 +269,42 @@ StocksGridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](7, 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](8, StocksGridComponent_mat_header_cell_8_Template, 2, 0, "mat-header-cell", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](9, StocksGridComponent_mat_cell_9_Template, 2, 6, "mat-cell", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](9, StocksGridComponent_mat_cell_9_Template, 2, 1, "mat-cell", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](10, 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](10, 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](11, StocksGridComponent_mat_header_cell_11_Template, 2, 0, "mat-header-cell", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](12, StocksGridComponent_mat_cell_12_Template, 2, 5, "mat-cell", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](12, StocksGridComponent_mat_cell_12_Template, 2, 6, "mat-cell", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](13, 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](14, StocksGridComponent_mat_header_cell_14_Template, 2, 0, "mat-header-cell", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](15, StocksGridComponent_mat_cell_15_Template, 2, 5, "mat-cell", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](14, StocksGridComponent_mat_header_cell_14_Template, 2, 0, "mat-header-cell", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](15, StocksGridComponent_mat_cell_15_Template, 2, 5, "mat-cell", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](16, 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](17, StocksGridComponent_mat_header_cell_17_Template, 2, 0, "mat-header-cell", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](18, StocksGridComponent_mat_cell_18_Template, 2, 1, "mat-cell", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](16, 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](17, StocksGridComponent_mat_header_cell_17_Template, 2, 0, "mat-header-cell", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](18, StocksGridComponent_mat_cell_18_Template, 2, 5, "mat-cell", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](19, 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](20, StocksGridComponent_mat_header_cell_20_Template, 2, 0, "mat-header-cell", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](20, StocksGridComponent_mat_header_cell_20_Template, 2, 0, "mat-header-cell", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](21, StocksGridComponent_mat_cell_21_Template, 2, 1, "mat-cell", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](22, 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](23, StocksGridComponent_mat_header_cell_23_Template, 2, 0, "mat-header-cell", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](24, StocksGridComponent_mat_cell_24_Template, 3, 2, "mat-cell", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](23, StocksGridComponent_mat_header_cell_23_Template, 2, 0, "mat-header-cell", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](24, StocksGridComponent_mat_cell_24_Template, 2, 1, "mat-cell", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](25, StocksGridComponent_mat_header_row_25_Template, 1, 0, "mat-header-row", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](26, StocksGridComponent_mat_row_26_Template, 1, 0, "mat-row", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](25, 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](26, StocksGridComponent_mat_header_cell_26_Template, 2, 0, "mat-header-cell", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](27, StocksGridComponent_mat_cell_27_Template, 2, 1, "mat-cell", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](28, StocksGridComponent_mat_header_row_28_Template, 1, 0, "mat-header-row", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](29, StocksGridComponent_mat_row_29_Template, 1, 0, "mat-row", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("dataSource", ctx.dataSource)("trackBy", ctx.trackByStock);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](28);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("matHeaderRowDef", ctx.displayedColumns)("matHeaderRowDefSticky", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: [_angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTable"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__["MatSort"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatColumnDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderCell"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__["MatSortHeader"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatCell"], _angular_material_badge__WEBPACK_IMPORTED_MODULE_4__["MatBadge"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderRow"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatRow"]], styles: ["[_nghost-%COMP%] {\n  flex: 1;\n  display: flex;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%] {\n  flex: 1;\n  height: 800px;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .stocks-grid__row[_ngcontent-%COMP%]:not(.example-expanded-row):hover {\n  background: whitesmoke;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .stocks-grid__row[_ngcontent-%COMP%]:not(.example-expanded-row):active {\n  background: #efefef;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .grid__ticker[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content: center;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .grid__ticker[_ngcontent-%COMP%]   .grid-ticker__count[_ngcontent-%COMP%] {\n  font-size: 0.8rem;\n  color: #a5a2a2;\n  align-items: flex-start;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .stocks-grid__header[_ngcontent-%COMP%] {\n  background: linear-gradient(#f1f1f1, #fff);\n  font-family: \"Roboto Condensed\", sans-serif;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .stocks-grid__header[_ngcontent-%COMP%]   .mat-header-cell[_ngcontent-%COMP%] {\n  font-size: 0.8rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3N0b2Nrcy1ncmlkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsT0FBQTtFQUNBLGFBQUE7QUFDRjtBQUFFO0VBQ0UsT0FBQTtFQUNBLGFBQUE7QUFFSjtBQURJO0VBQ0Usc0JBQUE7QUFHTjtBQUFJO0VBQ0UsbUJBQUE7QUFFTjtBQUNJO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsdUJBQUE7RUFDQSx1QkFBQTtBQUNOO0FBQU07RUFDRSxpQkFBQTtFQUNBLGNBQUE7RUFDQSx1QkFBQTtBQUVSO0FBRUk7RUFDRSwwQ0FBQTtFQUNBLDJDQUFBO0FBQU47QUFDTTtFQUNFLGlCQUFBO0FBQ1IiLCJmaWxlIjoic3RvY2tzLWdyaWQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGZsZXg6IDE7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIC5zdG9ja3NfX2dyaWQge1xuICAgIGZsZXg6IDE7XG4gICAgaGVpZ2h0OiA4MDBweDtcbiAgICAuc3RvY2tzLWdyaWRfX3Jvdzpub3QoLmV4YW1wbGUtZXhwYW5kZWQtcm93KTpob3ZlciB7XG4gICAgICBiYWNrZ3JvdW5kOiB3aGl0ZXNtb2tlO1xuICAgIH1cblxuICAgIC5zdG9ja3MtZ3JpZF9fcm93Om5vdCguZXhhbXBsZS1leHBhbmRlZC1yb3cpOmFjdGl2ZSB7XG4gICAgICBiYWNrZ3JvdW5kOiAjZWZlZmVmO1xuICAgIH1cblxuICAgIC5ncmlkX190aWNrZXIge1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICBhbGlnbi1pdGVtczogZmxleC1zdGFydDtcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgLmdyaWQtdGlja2VyX19jb3VudCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMC44cmVtO1xuICAgICAgICBjb2xvcjogI2E1YTJhMjtcbiAgICAgICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLnN0b2Nrcy1ncmlkX19oZWFkZXIge1xuICAgICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KCNmMWYxZjEsICNmZmYpO1xuICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8gQ29uZGVuc2VkJywgc2Fucy1zZXJpZjtcbiAgICAgIC5tYXQtaGVhZGVyLWNlbGwge1xuICAgICAgICBmb250LXNpemU6IDAuOHJlbTtcbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */"], data: { animation: [
+    } }, directives: [_angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTable"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__["MatSort"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatColumnDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderCell"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__["MatSortHeader"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatCell"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_material_chips__WEBPACK_IMPORTED_MODULE_5__["MatChipList"], _angular_material_chips__WEBPACK_IMPORTED_MODULE_5__["MatChip"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderRow"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatRow"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["CurrencyPipe"]], styles: ["[_nghost-%COMP%] {\n  flex: 1;\n  display: flex;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%] {\n  flex: 1;\n  height: 800px;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .stocks-grid__row[_ngcontent-%COMP%]:not(.example-expanded-row):hover {\n  background: whitesmoke;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .stocks-grid__row[_ngcontent-%COMP%]:not(.example-expanded-row):active {\n  background: #efefef;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .grid__ticker[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content: center;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .grid__ticker[_ngcontent-%COMP%]   .grid-ticker__count[_ngcontent-%COMP%] {\n  font-size: 0.8rem;\n  color: #a5a2a2;\n  align-items: flex-start;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .stocks-grid__header[_ngcontent-%COMP%] {\n  background: linear-gradient(#f1f1f1, #fff);\n  font-family: \"Roboto Condensed\", sans-serif;\n}\n[_nghost-%COMP%]   .stocks__grid[_ngcontent-%COMP%]   .stocks-grid__header[_ngcontent-%COMP%]   .mat-header-cell[_ngcontent-%COMP%] {\n  font-size: 0.8rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3N0b2Nrcy1ncmlkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsT0FBQTtFQUNBLGFBQUE7QUFDRjtBQUFFO0VBQ0UsT0FBQTtFQUNBLGFBQUE7QUFFSjtBQURJO0VBQ0Usc0JBQUE7QUFHTjtBQUFJO0VBQ0UsbUJBQUE7QUFFTjtBQUNJO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsdUJBQUE7RUFDQSx1QkFBQTtBQUNOO0FBQU07RUFDRSxpQkFBQTtFQUNBLGNBQUE7RUFDQSx1QkFBQTtBQUVSO0FBRUk7RUFDRSwwQ0FBQTtFQUNBLDJDQUFBO0FBQU47QUFDTTtFQUNFLGlCQUFBO0FBQ1IiLCJmaWxlIjoic3RvY2tzLWdyaWQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGZsZXg6IDE7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIC5zdG9ja3NfX2dyaWQge1xuICAgIGZsZXg6IDE7XG4gICAgaGVpZ2h0OiA4MDBweDtcbiAgICAuc3RvY2tzLWdyaWRfX3Jvdzpub3QoLmV4YW1wbGUtZXhwYW5kZWQtcm93KTpob3ZlciB7XG4gICAgICBiYWNrZ3JvdW5kOiB3aGl0ZXNtb2tlO1xuICAgIH1cblxuICAgIC5zdG9ja3MtZ3JpZF9fcm93Om5vdCguZXhhbXBsZS1leHBhbmRlZC1yb3cpOmFjdGl2ZSB7XG4gICAgICBiYWNrZ3JvdW5kOiAjZWZlZmVmO1xuICAgIH1cblxuICAgIC5ncmlkX190aWNrZXIge1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICBhbGlnbi1pdGVtczogZmxleC1zdGFydDtcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgLmdyaWQtdGlja2VyX19jb3VudCB7XG4gICAgICAgIGZvbnQtc2l6ZTogMC44cmVtO1xuICAgICAgICBjb2xvcjogI2E1YTJhMjtcbiAgICAgICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLnN0b2Nrcy1ncmlkX19oZWFkZXIge1xuICAgICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KCNmMWYxZjEsICNmZmYpO1xuICAgICAgZm9udC1mYW1pbHk6ICdSb2JvdG8gQ29uZGVuc2VkJywgc2Fucy1zZXJpZjtcbiAgICAgIC5tYXQtaGVhZGVyLWNlbGwge1xuICAgICAgICBmb250LXNpemU6IDAuOHJlbTtcbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */"], data: { animation: [
             Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["trigger"])('detailExpand', [
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["state"])('collapsed', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ height: '0px', minHeight: '0' })),
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["state"])('expanded', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ height: '*' })),
@@ -303,7 +341,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/progress-spinner */ "Xa2L");
 /* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/sort */ "Dh3D");
 /* harmony import */ var _angular_material_badge__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/badge */ "TU8p");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/chips */ "A5z7");
+/* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/button-toggle */ "jaxi");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
 
 
 
@@ -323,8 +365,8 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClientModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
@@ -335,8 +377,10 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineInjecto
             _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatProgressSpinnerModule"],
             _angular_material_sort__WEBPACK_IMPORTED_MODULE_14__["MatSortModule"],
             _angular_material_badge__WEBPACK_IMPORTED_MODULE_15__["MatBadgeModule"],
+            _angular_material_chips__WEBPACK_IMPORTED_MODULE_16__["MatChipsModule"],
+            _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_17__["MatButtonToggleModule"],
         ], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
         _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"],
         _watchlist_watchlist_component__WEBPACK_IMPORTED_MODULE_7__["WatchlistComponent"],
         _position_position_component__WEBPACK_IMPORTED_MODULE_8__["PositionComponent"],
@@ -350,7 +394,9 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineInjecto
         _angular_material_table__WEBPACK_IMPORTED_MODULE_12__["MatTableModule"],
         _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatProgressSpinnerModule"],
         _angular_material_sort__WEBPACK_IMPORTED_MODULE_14__["MatSortModule"],
-        _angular_material_badge__WEBPACK_IMPORTED_MODULE_15__["MatBadgeModule"]], exports: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"]] }); })();
+        _angular_material_badge__WEBPACK_IMPORTED_MODULE_15__["MatBadgeModule"],
+        _angular_material_chips__WEBPACK_IMPORTED_MODULE_16__["MatChipsModule"],
+        _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_17__["MatButtonToggleModule"]], exports: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"]] }); })();
 
 
 /***/ }),
@@ -673,9 +719,13 @@ __webpack_require__.r(__webpack_exports__);
 class StocksService {
     howManySharesToAverage(stock, expectedRate) {
         if (!stock || !expectedRate)
-            throw new Error('Values cannot be null');
+            return 0;
+        //throw new Error('Values cannot be null');
         if (expectedRate <= stock.lastPrice)
-            throw new Error('The current price of the stock cannot be greater than the expected rate');
+            return 0;
+        // throw new Error(
+        //   'The current price of the stock cannot be greater than the expected rate'
+        // );
         return ((stock.count * (stock.cost - expectedRate)) /
             (expectedRate - stock.lastPrice));
     }
@@ -693,7 +743,7 @@ StocksService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
 /*! exports provided: trade, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"trade\":[{\"name\":\"AMERITRADE\",\"owner\":\"TONY\",\"code\":\"AM_TX\",\"stocks\":[{\"ticker\":\"ALNA\",\"cost\":2.16,\"count\":500,\"max\":5,\"min\":1.5,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"AMC\",\"cost\":10.039376,\"count\":949,\"max\":15,\"min\":7.6,\"position\":true,\"expires\":\"03/12/2021\",\"events\":[]},{\"ticker\":\"APXT\",\"cost\":15,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BHTG\",\"cost\":3.51,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BIOL\",\"cost\":1.10667,\"count\":600,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BLDV\",\"cost\":0.00487,\"count\":40000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BNGO\",\"cost\":10.59616,\"count\":250,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"CCIV\",\"cost\":38.16364,\"count\":165,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"CGIX\",\"cost\":10.63667,\"count\":300,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"ELCR\",\"cost\":0.003,\"count\":139000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"FTOC\",\"cost\":14.005,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GEVO\",\"cost\":8.9,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GSAT\",\"cost\":2.48,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GTEH\",\"cost\":0.00159,\"count\":475000,\"max\":1,\"min\":0.002,\"position\":true},{\"ticker\":\"HCMC\",\"cost\":0.00463,\"count\":150000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"JAGX\",\"cost\":3.52945,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"LIFE\",\"cost\":6.25262,\"count\":103,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"LTNC\",\"cost\":0.03769,\"count\":10000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"NIO\",\"cost\":65.15,\"count\":20,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"SAVA\",\"cost\":82.7,\"count\":60,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":50},{\"ticker\":\"SENS\",\"cost\":3.81,\"count\":500,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"SLRX\",\"cost\":2.28,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"TELL\",\"cost\":3.33343,\"count\":700,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"THCB\",\"cost\":21.25,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"TLSS\",\"cost\":0.05985,\"count\":1000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"VGAC\",\"cost\":15.4214,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"VPER\",\"cost\":0.02336,\"count\":30000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"ZOM\",\"cost\":2.58389,\"count\":3600,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":2.2},{\"ticker\":\"ZSAN\",\"cost\":2.815,\"count\":200,\"max\":null,\"min\":null,\"position\":true}]},{\"name\":\"WEBULL(Email)\",\"owner\":\"TONY\",\"code\":\"WE_TX(E)\",\"stocks\":[{\"ticker\":\"BNGO\",\"cost\":9.75,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"PHCF\",\"cost\":9.5,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ACIC\",\"cost\":16.491,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CCIV\",\"cost\":37.632,\"count\":130,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CTRM\",\"cost\":1.3,\"count\":500,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":2.351,\"count\":550,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"GILT\",\"cost\":19.5,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"TRCH\",\"cost\":3.49,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"HYLN\",\"cost\":18.5,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"TNXP\",\"cost\":1.5,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ADT\",\"cost\":9.37,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NAKD\",\"cost\":2.064,\"count\":625,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"AMC\",\"cost\":9.671,\"count\":70,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NOK\",\"cost\":4.9,\"count\":200,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WEBULL(Mobile)\",\"owner\":\"TONY\",\"code\":\"WE_TX(M)\",\"stocks\":[{\"ticker\":\"AVXL\",\"cost\":17.5,\"count\":28,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WEBULL\",\"owner\":\"VINEETHA\",\"code\":\"WE_VI\",\"stocks\":[{\"ticker\":\"BNGO\",\"cost\":6.9,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":1.84,\"count\":1000,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"RIOT\",\"cost\":52.25,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"GNW\",\"cost\":3.31,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CCIV\",\"cost\":33.04,\"count\":75,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"ROBINHOOD\",\"owner\":\"TONY\",\"code\":\"RB_TX\",\"stocks\":[{\"ticker\":\"NIO\",\"cost\":45.22,\"count\":70,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"BNGO\",\"cost\":9.09,\"count\":302,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":8,\"expires\":null,\"events\":[]},{\"ticker\":\"PLTR\",\"cost\":26.53,\"count\":95,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"AMZN\",\"cost\":3247.65,\"count\":0.032639,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"SIRI\",\"cost\":5.9,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"ROBINHOOD\",\"owner\":\"VINEETHA\",\"code\":\"RB_VI\",\"stocks\":[{\"ticker\":\"AGEN\",\"cost\":3.23,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"ETRADE\",\"owner\":\"VINEETHA\",\"code\":\"ET_VI\",\"stocks\":[{\"ticker\":\"AVXL\",\"cost\":16.5,\"count\":15,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"BNGO\",\"cost\":8.0565,\"count\":131,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"EVFM\",\"cost\":2.08,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NNDM\",\"cost\":13.3,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":0.735,\"count\":1350,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WATCHLIST\",\"owner\":\"TONY\",\"code\":\"WA_TX\",\"stocks\":[{\"ticker\":\"ORLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"GNOG\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"NVCN\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"GNUS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"TRCH\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"OGI\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"IDEX\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CRIS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CLNE\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"FTFT\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"MRO\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"SRNE\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"MVIS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"QS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"LAZR\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"BFT\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"UAVS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"FCEL\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"WKHS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"AAPL\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"TSLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"VTI\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"TTCF\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"WKHS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"CRWD\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"FSR\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"ev\"]}]}]}");
+module.exports = JSON.parse("{\"trade\":[{\"name\":\"AMERITRADE\",\"owner\":\"TONY\",\"code\":\"AM_TX\",\"stocks\":[{\"ticker\":\"ALNA\",\"cost\":2.16,\"count\":500,\"max\":5,\"min\":1.5,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"AMC\",\"cost\":10.039376,\"count\":949,\"max\":15,\"min\":7.6,\"position\":true,\"expires\":\"03/12/2021\",\"adjustRate\":9.5,\"events\":[]},{\"ticker\":\"APXT\",\"cost\":15,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BHTG\",\"cost\":3.51,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BIOL\",\"cost\":1.10667,\"count\":600,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BLDV\",\"cost\":0.00487,\"count\":40000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BNGO\",\"cost\":10.59616,\"count\":250,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"CCIV\",\"cost\":38.16364,\"count\":165,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"CGIX\",\"cost\":10.63667,\"count\":300,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"ELCR\",\"cost\":0.003,\"count\":139000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"FTOC\",\"cost\":14.005,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GEVO\",\"cost\":8.9,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GSAT\",\"cost\":2.48,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GTEH\",\"cost\":0.00159,\"count\":475000,\"max\":1,\"min\":0.002,\"position\":true},{\"ticker\":\"HCMC\",\"cost\":0.00463,\"count\":150000,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":0.003},{\"ticker\":\"JAGX\",\"cost\":3.52945,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"LIFE\",\"cost\":6.25262,\"count\":103,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"LTNC\",\"cost\":0.03769,\"count\":10000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"NIO\",\"cost\":65.15,\"count\":20,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":45},{\"ticker\":\"SAVA\",\"cost\":82.7,\"count\":60,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":50},{\"ticker\":\"SENS\",\"cost\":3.81,\"count\":500,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"SLRX\",\"cost\":2.28,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"TELL\",\"cost\":3.33343,\"count\":700,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"THCB\",\"cost\":21.25,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"TLSS\",\"cost\":0.05985,\"count\":1000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"VGAC\",\"cost\":15.4214,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"VPER\",\"cost\":0.02336,\"count\":30000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"ZOM\",\"cost\":2.58389,\"count\":3600,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":2.2},{\"ticker\":\"ZSAN\",\"cost\":2.815,\"count\":200,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":1.5}]},{\"name\":\"WEBULL(Email)\",\"owner\":\"TONY\",\"code\":\"WE_TX(E)\",\"stocks\":[{\"ticker\":\"BNGO\",\"cost\":9.75,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"PHCF\",\"cost\":9.5,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ACIC\",\"cost\":16.491,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CCIV\",\"cost\":37.632,\"count\":130,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CTRM\",\"cost\":1.3,\"count\":500,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":2.351,\"count\":550,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"GILT\",\"cost\":19.5,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"TRCH\",\"cost\":3.49,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"HYLN\",\"cost\":18.5,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"TNXP\",\"cost\":1.5,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ADT\",\"cost\":9.37,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NAKD\",\"cost\":2.064,\"count\":625,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"AMC\",\"cost\":9.671,\"count\":70,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NOK\",\"cost\":4.9,\"count\":200,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WEBULL(Mobile)\",\"owner\":\"TONY\",\"code\":\"WE_TX(M)\",\"stocks\":[{\"ticker\":\"AVXL\",\"cost\":17.5,\"count\":28,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WEBULL\",\"owner\":\"VINEETHA\",\"code\":\"WE_VI\",\"stocks\":[{\"ticker\":\"BNGO\",\"cost\":6.9,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":1.84,\"count\":1000,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"RIOT\",\"cost\":52.25,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"GNW\",\"cost\":3.31,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CCIV\",\"cost\":33.04,\"count\":75,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"adjustRate\":25,\"events\":[]}]},{\"name\":\"ROBINHOOD\",\"owner\":\"TONY\",\"code\":\"RB_TX\",\"stocks\":[{\"ticker\":\"NIO\",\"cost\":45.22,\"count\":70,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"adjustRate\":40,\"events\":[]},{\"ticker\":\"BNGO\",\"cost\":9.09,\"count\":302,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":8,\"expires\":null,\"events\":[]},{\"ticker\":\"PLTR\",\"cost\":26.53,\"count\":95,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"adjustRate\":23,\"events\":[]},{\"ticker\":\"AMZN\",\"cost\":3247.65,\"count\":0.032639,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"SIRI\",\"cost\":5.9,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"ROBINHOOD\",\"owner\":\"VINEETHA\",\"code\":\"RB_VI\",\"stocks\":[{\"ticker\":\"AGEN\",\"cost\":3.23,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"ETRADE\",\"owner\":\"VINEETHA\",\"code\":\"ET_VI\",\"stocks\":[{\"ticker\":\"AVXL\",\"cost\":16.5,\"count\":15,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"BNGO\",\"cost\":8.0565,\"count\":131,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"EVFM\",\"cost\":2.08,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NNDM\",\"cost\":13.3,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":0.735,\"count\":1350,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WATCHLIST\",\"owner\":\"TONY\",\"code\":\"WA_TX\",\"stocks\":[{\"ticker\":\"ORLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"GNOG\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"NVCN\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"GNUS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"TRCH\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"OGI\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"IDEX\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CRIS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CLNE\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"FTFT\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"MRO\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"SRNE\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"MVIS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"QS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"LAZR\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"BFT\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"UAVS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"FCEL\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"WKHS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"AAPL\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"TSLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"VTI\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"TTCF\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"WKHS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"CRWD\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"FSR\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"ev\"]},{\"ticker\":\"GE\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"sain\"]},{\"ticker\":\"MESA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"sain\"]},{\"ticker\":\"F\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"sain\"]},{\"ticker\":\"CRWD\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"sain\"]}]}]}");
 
 /***/ }),
 
@@ -759,6 +809,7 @@ class HomeComponent {
         this.displayedColumns = [
             'ticker',
             'cost',
+            'totalcost',
             'lastPrice',
             'profit',
             'Buy/Sell',
@@ -796,10 +847,10 @@ class HomeComponent {
                     ? this.stocksService
                         .howManySharesToAverage(s, s.adjustRate)
                         .toFixed(2)
-                    : null })))
-                .sort((s1, s2) => +s2.profit - +s1.profit) })))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(() => (this.loading = false)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])(() => {
+                    : null, totalCost: (s.cost * s.count).toFixed(2) })))
+                .sort((s1, s2) => +s2.profit - +s1.profit) })))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(() => (this.loading = false)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])((e) => {
             this.loading = false;
-            alert('ERROR');
+            console.error(e);
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(null);
         }));
     }
