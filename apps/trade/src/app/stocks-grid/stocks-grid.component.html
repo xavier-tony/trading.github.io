@@ -72,12 +72,11 @@
   <ng-container matColumnDef="adjustShares">
     <mat-header-cell *matHeaderCellDef> Adjust Shares </mat-header-cell>
     <mat-cell *matCellDef="let row">
-      
       <mat-chip-list *ngIf="row.adjustRate">
         <mat-chip color="primary" selected>{{ row.adjustRate }}</mat-chip>
         <mat-chip color="accent" selected>{{ row.adjustShares }}</mat-chip>
         <mat-chip color="warn" selected>{{
-          (row.adjustShares * row.adjustRate)|currency
+          row.adjustShares * row.adjustRate | currency
         }}</mat-chip>
       </mat-chip-list>
     </mat-cell>

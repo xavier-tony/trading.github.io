@@ -4,6 +4,15 @@
 
 export const environment = {
   production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyAEYfISRAoFYXz-MsCe_yv4qR895PZVqXY',
+    authDomain: 'shawnz-trade.firebaseapp.com',
+    projectId: 'shawnz-trade',
+    storageBucket: 'shawnz-trade.appspot.com',
+    messagingSenderId: '19655963536',
+    appId: '1:19655963536:web:e60bdc947094e0fe5db915',
+    measurementId: 'G-7Y2YFCYLER',
+  },
 };
 
 /*

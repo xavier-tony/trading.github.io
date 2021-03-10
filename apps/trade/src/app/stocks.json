@@ -6,6 +6,17 @@
       "code": "AM_TX",
       "stocks": [
         {
+          "ticker": "SPPI",
+          "cost": 4.09,
+          "count": 1700,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "adjustRate": 3.8,
+          "events": []
+        },
+        {
           "ticker": "ALNA",
           "cost": 2.16,
           "count": 500,
@@ -64,7 +75,8 @@
           "count": 250,
           "max": null,
           "min": null,
-          "position": true
+          "position": true,
+          "adjustRate": 9
         },
         {
           "ticker": "CCIV",
@@ -484,7 +496,7 @@
           "min": null,
           "position": true,
           "expires": null,
-          "adjustRate": 40,
+          "adjustRate": 43,
           "events": []
         },
         {

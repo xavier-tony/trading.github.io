@@ -1,3 +1,6 @@
+<button mat-raised-button color="primary" (click)="addNewTrade()">
+  Add New Trade
+</button>
 <mat-tab-group color="primary" [@.disabled]="true">
   <mat-tab
     *ngFor="let trade of trade$ | async; let i = index; trackBy: trackByTrade"

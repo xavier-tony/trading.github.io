@@ -3,16 +3,16 @@
   font-family: 'Roboto Condensed';
 }
 
-::ng-deep .mat-ink-bar {
-  background-color: #00c805 !important;
-}
+// ::ng-deep .mat-ink-bar {
+//   background-color: #00c805 !important;
+// }
 
-::ng-deep .mat-tab-label-active {
-  background-color: #00c805;
-  color: #fff;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
+// ::ng-deep .mat-tab-label-active {
+//   background-color: #00c805;
+//   color: #fff;
+//   border-top-left-radius: 5px;
+//   border-top-right-radius: 5px;
+// }
 .stocks {
   display: flex;
   flex-wrap: wrap;

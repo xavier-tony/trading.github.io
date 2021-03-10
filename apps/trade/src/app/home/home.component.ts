@@ -1,5 +1,10 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import {
+  MatBottomSheet,
+  MatBottomSheetConfig,
+} from '@angular/material/bottom-sheet';
 import { Observable, of, Subject, timer } from 'rxjs';
 import {
   catchError,
@@ -10,7 +15,7 @@ import {
   takeUntil,
   tap,
 } from 'rxjs/operators';
-import { trade } from '../stocks.json';
+import { ActionComponent } from '../action/action.component';
 import { StocksService } from '../stocks.service';
 import { IResponse, IStock, ITrade } from './trade.interface';
 
@@ -23,6 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   trade$: Observable<ITrade>;
   private stopPolling = new Subject();
   loading = false;
+  stocks$: Observable<ITrade[]>;
   displayedColumns: string[] = [
     'ticker',
     'cost',
@@ -34,11 +40,19 @@ export class HomeComponent implements OnInit, OnDestroy {
     'max',
     'adjustShares',
   ];
-  constructor(private http: HttpClient, private stocksService: StocksService) {}
+  constructor(
+    private http: HttpClient,
+    private stocksService: StocksService,
+    public db: AngularFireDatabase,
+    private bottomSheet: MatBottomSheet
+  ) {}
 
   ngOnInit() {
+    this.stocks$ = this.db.list<ITrade>('trade').valueChanges();
     this.trade$ = timer(1, 2000).pipe(
-      switchMap(() => this.getStocks(this.getTickers(trade))),
+      switchMap(() => this.stocks$),
+      switchMap((trade) => this.getStocks(trade)),
+      tap((s) => console.log('x', s)),
       retry(),
       share(),
       takeUntil(this.stopPolling)
@@ -56,7 +70,27 @@ export class HomeComponent implements OnInit, OnDestroy {
     );
   }
 
-  getStocks(tickers: string[]) {
+  addNewTrade() {
+    const bottomSheetConfig: MatBottomSheetConfig = {
+      autoFocus: true,
+      data: {
+        tradeRef: this.db.list('trade'),
+      },
+    };
+    this.bottomSheet.open(ActionComponent, bottomSheetConfig);
+    // const trade: ITrade = {
+    //   code: 'Pennies',
+    //   name: 'PENNY',
+    //   owner: 'TONY',
+    //   stocks: [],
+    // };
+    // const tradeRef = this.db.list('trade');
+    // tradeRef.push(trade);
+  }
+
+  getStocks(trade: ITrade[]) {
+    const tickers = this.getTickers(trade);
+
     this.loading = true;
     const httpHeaders = new HttpHeaders().set(
       'Content-Type',
@@ -76,12 +110,14 @@ export class HomeComponent implements OnInit, OnDestroy {
         map((s: IResponse[]) => {
           return trade.map((tr: ITrade) => ({
             ...tr,
-            stocks: tr.stocks.map((st: IStock) => ({
-              ...st,
-              ...Array.from(Object.values(s)).find(
-                (s: IResponse) => s.symbol === st.ticker
-              ),
-            })),
+            stocks: tr.stocks
+              ? tr.stocks.map((st: IStock) => ({
+                  ...st,
+                  ...Array.from(Object.values(s)).find(
+                    (s: IResponse) => s.symbol === st.ticker
+                  ),
+                }))
+              : [],
           }));
         }),
         map((trade) =>
@@ -100,7 +136,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                       .howManySharesToAverage(s, s.adjustRate)
                       .toFixed(2)
                   : null,
-                totalCost : (s.cost * s.count).toFixed(2)
+                totalCost: (s.cost * s.count).toFixed(2),
               }))
               .sort((s1, s2) => +s2.profit - +s1.profit),
           }))

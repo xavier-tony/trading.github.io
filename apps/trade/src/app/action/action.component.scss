@@ -1,0 +1,9 @@
+.action-form {
+  display: flex;
+  flex-direction: column;
+  .action__header{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+  }
+}
