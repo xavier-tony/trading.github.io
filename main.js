@@ -343,7 +343,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_badge__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/badge */ "TU8p");
 /* harmony import */ var _angular_material_chips__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/chips */ "A5z7");
 /* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/button-toggle */ "jaxi");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/fire */ "spgP");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/fire/database */ "sSZD");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../environments/environment */ "Z/QR");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/bottom-sheet */ "2ChS");
+/* harmony import */ var _action_action_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./action/action.component */ "d1UU");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/form-field */ "kmnG");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material/input */ "qFsG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+
+
+
+
+
+
+
 
 
 
@@ -365,8 +382,8 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_26__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_26__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClientModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
@@ -379,13 +396,20 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵdefineInjecto
             _angular_material_badge__WEBPACK_IMPORTED_MODULE_15__["MatBadgeModule"],
             _angular_material_chips__WEBPACK_IMPORTED_MODULE_16__["MatChipsModule"],
             _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_17__["MatButtonToggleModule"],
+            _angular_fire__WEBPACK_IMPORTED_MODULE_18__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_20__["environment"].firebaseConfig, 'shawnz-trade'),
+            _angular_fire_database__WEBPACK_IMPORTED_MODULE_19__["AngularFireDatabaseModule"],
+            _angular_material_button__WEBPACK_IMPORTED_MODULE_21__["MatButtonModule"],
+            _angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_22__["MatBottomSheetModule"],
+            _angular_material_form_field__WEBPACK_IMPORTED_MODULE_24__["MatFormFieldModule"],
+            _angular_material_input__WEBPACK_IMPORTED_MODULE_25__["MatInputModule"],
         ], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_26__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
         _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"],
         _watchlist_watchlist_component__WEBPACK_IMPORTED_MODULE_7__["WatchlistComponent"],
         _position_position_component__WEBPACK_IMPORTED_MODULE_8__["PositionComponent"],
         _buysellprogress_buysellprogress_component__WEBPACK_IMPORTED_MODULE_9__["BuySellProgressComponent"],
-        _stocks_grid_stocks_grid_component__WEBPACK_IMPORTED_MODULE_11__["StocksGridComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+        _stocks_grid_stocks_grid_component__WEBPACK_IMPORTED_MODULE_11__["StocksGridComponent"],
+        _action_action_component__WEBPACK_IMPORTED_MODULE_23__["ActionComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClientModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
@@ -396,7 +420,11 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵdefineInjecto
         _angular_material_sort__WEBPACK_IMPORTED_MODULE_14__["MatSortModule"],
         _angular_material_badge__WEBPACK_IMPORTED_MODULE_15__["MatBadgeModule"],
         _angular_material_chips__WEBPACK_IMPORTED_MODULE_16__["MatChipsModule"],
-        _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_17__["MatButtonToggleModule"]], exports: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"]] }); })();
+        _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_17__["MatButtonToggleModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_18__["AngularFireModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_19__["AngularFireDatabaseModule"],
+        _angular_material_button__WEBPACK_IMPORTED_MODULE_21__["MatButtonModule"],
+        _angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_22__["MatBottomSheetModule"],
+        _angular_material_form_field__WEBPACK_IMPORTED_MODULE_24__["MatFormFieldModule"],
+        _angular_material_input__WEBPACK_IMPORTED_MODULE_25__["MatInputModule"]], exports: [_angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"]] }); })();
 
 
 /***/ }),
@@ -497,29 +525,35 @@ WatchlistComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/fire/database */ "sSZD");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
 
 
 class AppComponent {
-    constructor() {
+    constructor(db) {
+        this.db = db;
         this.title = 'trade';
+        this.stocks$ = db.list('trade').valueChanges();
+        this.stocks$.subscribe(console.log);
     }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["money-root"]], decls: 7, vars: 0, consts: [[1, "header"], [1, "container"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "main");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "header", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "STOCKS");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "router-outlet");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "footer");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: stretch;\n  width: 100%;\n}\n[_nghost-%COMP%]   main[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: stretch;\n  padding: 0 20px;\n}\n[_nghost-%COMP%]   main[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  padding: 10px 0;\n}\n[_nghost-%COMP%]   main[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: \"Roboto Condensed\", sans-serif;\n  font-weight: normal;\n  font-size: 1.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLG9CQUFBO0VBQ0EsV0FBQTtBQUNGO0FBQUU7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxvQkFBQTtFQUNBLGVBQUE7QUFFSjtBQURJO0VBQ0UsZUFBQTtBQUdOO0FBRk07RUFDRSwyQ0FBQTtFQUNBLG1CQUFBO0VBQ0EsaUJBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQUlSIiwiZmlsZSI6ImFwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IHN0cmV0Y2g7XG4gIHdpZHRoOiAxMDAlO1xuICBtYWluIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYWxpZ24taXRlbXM6IHN0cmV0Y2g7XG4gICAgcGFkZGluZzogMCAyMHB4O1xuICAgIC5oZWFkZXIge1xuICAgICAgcGFkZGluZzogMTBweCAwO1xuICAgICAgaDEge1xuICAgICAgICBmb250LWZhbWlseTogJ1JvYm90byBDb25kZW5zZWQnLCBzYW5zLXNlcmlmO1xuICAgICAgICBmb250LXdlaWdodDogbm9ybWFsO1xuICAgICAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */"] });
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_fire_database__WEBPACK_IMPORTED_MODULE_0__["AngularFireDatabase"])); };
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["money-root"]], decls: 7, vars: 0, consts: [[1, "header"], [1, "container"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "main");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "header", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "STOCKS");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](5, "router-outlet");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "footer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: stretch;\n  width: 100%;\n}\n[_nghost-%COMP%]   main[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: stretch;\n  padding: 0 20px;\n}\n[_nghost-%COMP%]   main[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%] {\n  padding: 10px 0;\n}\n[_nghost-%COMP%]   main[_ngcontent-%COMP%]   .header[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: \"Roboto Condensed\", sans-serif;\n  font-weight: normal;\n  font-size: 1.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtFQUNBLG9CQUFBO0VBQ0EsV0FBQTtBQUNGO0FBQUU7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxvQkFBQTtFQUNBLGVBQUE7QUFFSjtBQURJO0VBQ0UsZUFBQTtBQUdOO0FBRk07RUFDRSwyQ0FBQTtFQUNBLG1CQUFBO0VBQ0EsaUJBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQUlSIiwiZmlsZSI6ImFwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IHN0cmV0Y2g7XG4gIHdpZHRoOiAxMDAlO1xuICBtYWluIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYWxpZ24taXRlbXM6IHN0cmV0Y2g7XG4gICAgcGFkZGluZzogMCAyMHB4O1xuICAgIC5oZWFkZXIge1xuICAgICAgcGFkZGluZzogMTBweCAwO1xuICAgICAgaDEge1xuICAgICAgICBmb250LWZhbWlseTogJ1JvYm90byBDb25kZW5zZWQnLCBzYW5zLXNlcmlmO1xuICAgICAgICBmb250LXdlaWdodDogbm9ybWFsO1xuICAgICAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */"] });
 
 
 /***/ }),
@@ -595,6 +629,15 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
+    firebaseConfig: {
+        apiKey: 'AIzaSyAEYfISRAoFYXz-MsCe_yv4qR895PZVqXY',
+        authDomain: 'shawnz-trade.firebaseapp.com',
+        projectId: 'shawnz-trade',
+        storageBucket: 'shawnz-trade.appspot.com',
+        messagingSenderId: '19655963536',
+        appId: '1:19655963536:web:e60bdc947094e0fe5db915',
+        measurementId: 'G-7Y2YFCYLER',
+    },
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -604,6 +647,83 @@ const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
+/***/ "d1UU":
+/*!*******************************************************!*\
+  !*** ./apps/trade/src/app/action/action.component.ts ***!
+  \*******************************************************/
+/*! exports provided: ActionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionComponent", function() { return ActionComponent; });
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/fire/database */ "sSZD");
+/* harmony import */ var _angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/bottom-sheet */ "2ChS");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/form-field */ "kmnG");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/input */ "qFsG");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+
+
+
+
+
+
+
+
+class ActionComponent {
+    constructor(_bottomSheetRef, data, db) {
+        this._bottomSheetRef = _bottomSheetRef;
+        this.data = data;
+        this.db = db;
+    }
+    ngOnInit() {
+        console.log(this.data);
+    }
+    addNewTrade(code, name, owner) {
+        const tradeRef = this.db.list('trade');
+        tradeRef.push({
+            code: code,
+            name: name,
+            owner: owner,
+        });
+    }
+}
+ActionComponent.ɵfac = function ActionComponent_Factory(t) { return new (t || ActionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_1__["MatBottomSheetRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_1__["MAT_BOTTOM_SHEET_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_fire_database__WEBPACK_IMPORTED_MODULE_0__["AngularFireDatabase"])); };
+ActionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: ActionComponent, selectors: [["money-action"]], decls: 20, vars: 0, consts: [[1, "action-form"], [1, "action__header"], [1, "example-full-width"], ["matInput", "", "placeholder", "Code", "autocomplete", "off"], ["code", ""], ["matInput", "", "placeholder", "Name", "autocomplete", "off"], ["name", ""], ["matInput", "", "placeholder", "Owner", "autocomplete", "off"], ["owner", ""], ["mat-raised-button", "", "color", "primary", 3, "click"]], template: function ActionComponent_Template(rf, ctx) { if (rf & 1) {
+        const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "form", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "h2", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "ADD TRADE");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "mat-form-field", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, "Code");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](6, "input", 3, 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "mat-form-field", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](9, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](10, "Name");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](11, "input", 5, 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "mat-form-field", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](15, "Owner");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](16, "input", 7, 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](18, "button", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function ActionComponent_Template_button_click_18_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r3); const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](7); const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](12); const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](17); return ctx.addNewTrade(_r0.value, _r1.value, _r2.value); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](19, " Add ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    } }, directives: [_angular_material_form_field__WEBPACK_IMPORTED_MODULE_3__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_3__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_4__["MatInput"], _angular_material_button__WEBPACK_IMPORTED_MODULE_5__["MatButton"]], styles: [".action-form[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n.action-form[_ngcontent-%COMP%]   .action__header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL2FjdGlvbi5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFDQSxzQkFBQTtBQUNGO0FBQUU7RUFDQyxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQUVIIiwiZmlsZSI6ImFjdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5hY3Rpb24tZm9ybSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIC5hY3Rpb25fX2hlYWRlcntcblx0ICBkaXNwbGF5OiBmbGV4O1xuXHQgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cdCAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cbn1cbiJdfQ== */"] });
 
 
 /***/ }),
@@ -736,17 +856,6 @@ StocksService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
 
 /***/ }),
 
-/***/ "pbiv":
-/*!****************************************!*\
-  !*** ./apps/trade/src/app/stocks.json ***!
-  \****************************************/
-/*! exports provided: trade, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"trade\":[{\"name\":\"AMERITRADE\",\"owner\":\"TONY\",\"code\":\"AM_TX\",\"stocks\":[{\"ticker\":\"ALNA\",\"cost\":2.16,\"count\":500,\"max\":5,\"min\":1.5,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"AMC\",\"cost\":10.039376,\"count\":949,\"max\":15,\"min\":7.6,\"position\":true,\"expires\":\"03/12/2021\",\"adjustRate\":9.5,\"events\":[]},{\"ticker\":\"APXT\",\"cost\":15,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BHTG\",\"cost\":3.51,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BIOL\",\"cost\":1.10667,\"count\":600,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BLDV\",\"cost\":0.00487,\"count\":40000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"BNGO\",\"cost\":10.59616,\"count\":250,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"CCIV\",\"cost\":38.16364,\"count\":165,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"CGIX\",\"cost\":10.63667,\"count\":300,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"ELCR\",\"cost\":0.003,\"count\":139000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"FTOC\",\"cost\":14.005,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GEVO\",\"cost\":8.9,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GSAT\",\"cost\":2.48,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"GTEH\",\"cost\":0.00159,\"count\":475000,\"max\":1,\"min\":0.002,\"position\":true},{\"ticker\":\"HCMC\",\"cost\":0.00463,\"count\":150000,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":0.003},{\"ticker\":\"JAGX\",\"cost\":3.52945,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"LIFE\",\"cost\":6.25262,\"count\":103,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"LTNC\",\"cost\":0.03769,\"count\":10000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"NIO\",\"cost\":65.15,\"count\":20,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":45},{\"ticker\":\"SAVA\",\"cost\":82.7,\"count\":60,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":50},{\"ticker\":\"SENS\",\"cost\":3.81,\"count\":500,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"SLRX\",\"cost\":2.28,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"TELL\",\"cost\":3.33343,\"count\":700,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"THCB\",\"cost\":21.25,\"count\":100,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"TLSS\",\"cost\":0.05985,\"count\":1000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"VGAC\",\"cost\":15.4214,\"count\":200,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"VPER\",\"cost\":0.02336,\"count\":30000,\"max\":null,\"min\":null,\"position\":true},{\"ticker\":\"ZOM\",\"cost\":2.58389,\"count\":3600,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":2.2},{\"ticker\":\"ZSAN\",\"cost\":2.815,\"count\":200,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":1.5}]},{\"name\":\"WEBULL(Email)\",\"owner\":\"TONY\",\"code\":\"WE_TX(E)\",\"stocks\":[{\"ticker\":\"BNGO\",\"cost\":9.75,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"PHCF\",\"cost\":9.5,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ACIC\",\"cost\":16.491,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CCIV\",\"cost\":37.632,\"count\":130,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CTRM\",\"cost\":1.3,\"count\":500,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":2.351,\"count\":550,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"GILT\",\"cost\":19.5,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"TRCH\",\"cost\":3.49,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"HYLN\",\"cost\":18.5,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"TNXP\",\"cost\":1.5,\"count\":100,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ADT\",\"cost\":9.37,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NAKD\",\"cost\":2.064,\"count\":625,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"AMC\",\"cost\":9.671,\"count\":70,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NOK\",\"cost\":4.9,\"count\":200,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WEBULL(Mobile)\",\"owner\":\"TONY\",\"code\":\"WE_TX(M)\",\"stocks\":[{\"ticker\":\"AVXL\",\"cost\":17.5,\"count\":28,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WEBULL\",\"owner\":\"VINEETHA\",\"code\":\"WE_VI\",\"stocks\":[{\"ticker\":\"BNGO\",\"cost\":6.9,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":1.84,\"count\":1000,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"RIOT\",\"cost\":52.25,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"GNW\",\"cost\":3.31,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"CCIV\",\"cost\":33.04,\"count\":75,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"adjustRate\":25,\"events\":[]}]},{\"name\":\"ROBINHOOD\",\"owner\":\"TONY\",\"code\":\"RB_TX\",\"stocks\":[{\"ticker\":\"NIO\",\"cost\":45.22,\"count\":70,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"adjustRate\":40,\"events\":[]},{\"ticker\":\"BNGO\",\"cost\":9.09,\"count\":302,\"max\":null,\"min\":null,\"position\":true,\"adjustRate\":8,\"expires\":null,\"events\":[]},{\"ticker\":\"PLTR\",\"cost\":26.53,\"count\":95,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"adjustRate\":23,\"events\":[]},{\"ticker\":\"AMZN\",\"cost\":3247.65,\"count\":0.032639,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"SIRI\",\"cost\":5.9,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"ROBINHOOD\",\"owner\":\"VINEETHA\",\"code\":\"RB_VI\",\"stocks\":[{\"ticker\":\"AGEN\",\"cost\":3.23,\"count\":1,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"ETRADE\",\"owner\":\"VINEETHA\",\"code\":\"ET_VI\",\"stocks\":[{\"ticker\":\"AVXL\",\"cost\":16.5,\"count\":15,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"BNGO\",\"cost\":8.0565,\"count\":131,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"EVFM\",\"cost\":2.08,\"count\":10,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"NNDM\",\"cost\":13.3,\"count\":50,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]},{\"ticker\":\"ZOM\",\"cost\":0.735,\"count\":1350,\"max\":null,\"min\":null,\"position\":true,\"expires\":null,\"events\":[]}]},{\"name\":\"WATCHLIST\",\"owner\":\"TONY\",\"code\":\"WA_TX\",\"stocks\":[{\"ticker\":\"ATOS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"ORLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"GNOG\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"NVCN\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"GNUS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"TRCH\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"OGI\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"IDEX\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CRIS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CLNE\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"FTFT\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"MRO\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"SRNE\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"MVIS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"QS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"LAZR\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"CLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"BFT\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"UAVS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"FCEL\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"position\":false},{\"ticker\":\"WKHS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"AAPL\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"TSLA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"VTI\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"TTCF\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"WKHS\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"CRWD\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false},{\"ticker\":\"FSR\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"ev\"]},{\"ticker\":\"GE\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"sain\"]},{\"ticker\":\"MESA\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"sain\"]},{\"ticker\":\"F\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"sain\"]},{\"ticker\":\"CRWD\",\"cost\":null,\"count\":null,\"max\":null,\"min\":null,\"longterm\":true,\"position\":false,\"tags\":[\"sain\"]}]}]}");
-
-/***/ }),
-
 /***/ "yMW0":
 /*!***************************************************!*\
   !*** ./apps/trade/src/app/home/home.component.ts ***!
@@ -758,15 +867,17 @@ module.exports = JSON.parse("{\"trade\":[{\"name\":\"AMERITRADE\",\"owner\":\"TO
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "qCKp");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
-/* harmony import */ var _stocks_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../stocks.json */ "pbiv");
-var _stocks_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../stocks.json */ "pbiv", 1);
-/* harmony import */ var _stocks_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../stocks.service */ "pCMU");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _stocks_grid_stocks_grid_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../stocks-grid/stocks-grid.component */ "6Rgv");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/fire/database */ "sSZD");
+/* harmony import */ var _angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/bottom-sheet */ "2ChS");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "qCKp");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "kU1M");
+/* harmony import */ var _action_action_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../action/action.component */ "d1UU");
+/* harmony import */ var _stocks_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../stocks.service */ "pCMU");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _stocks_grid_stocks_grid_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../stocks-grid/stocks-grid.component */ "6Rgv");
 
 
 
@@ -778,33 +889,40 @@ var _stocks_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack
 
 
 
-function HomeComponent_mat_tab_1_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "div", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
+
+
+
+
+
+function HomeComponent_mat_tab_3_ng_template_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const trade_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtextInterpolate1"](" ", trade_r1.code, " ");
+    const trade_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtextInterpolate1"](" ", trade_r1.code, " ");
 } }
-function HomeComponent_mat_tab_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "mat-tab");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](1, HomeComponent_mat_tab_1_ng_template_1_Template, 2, 1, "ng-template", 2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](2, "div", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](3, "money-stocks-grid", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
+function HomeComponent_mat_tab_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "mat-tab");
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](1, HomeComponent_mat_tab_3_ng_template_1_Template, 2, 1, "ng-template", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](2, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](3, "money-stocks-grid", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const trade_r1 = ctx.$implicit;
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("stocks", trade_r1.stocks)("displayedColumns", ctx_r0.displayedColumns);
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("stocks", trade_r1.stocks)("displayedColumns", ctx_r0.displayedColumns);
 } }
 class HomeComponent {
-    constructor(http, stocksService) {
+    constructor(http, stocksService, db, bottomSheet) {
         this.http = http;
         this.stocksService = stocksService;
-        this.stopPolling = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        this.db = db;
+        this.bottomSheet = bottomSheet;
+        this.stopPolling = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.loading = false;
         this.displayedColumns = [
             'ticker',
@@ -821,14 +939,33 @@ class HomeComponent {
         this.trackByStock = (index, stock) => index;
     }
     ngOnInit() {
-        this.trade$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["timer"])(1, 2000).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(() => this.getStocks(this.getTickers(_stocks_json__WEBPACK_IMPORTED_MODULE_3__["trade"]))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["retry"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["share"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.stopPolling));
+        this.stocks$ = this.db.list('trade').valueChanges();
+        this.trade$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["timer"])(1, 2000).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(() => this.stocks$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])((trade) => this.getStocks(trade)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])((s) => console.log('x', s)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["retry"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["share"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(this.stopPolling));
     }
     getTickers(trade) {
         return [].concat(...trade
             .filter((t) => !!t.stocks)
             .map((t) => [...new Set(t.stocks.map((s) => s.ticker))]));
     }
-    getStocks(tickers) {
+    addNewTrade() {
+        const bottomSheetConfig = {
+            autoFocus: true,
+            data: {
+                tradeRef: this.db.list('trade'),
+            },
+        };
+        this.bottomSheet.open(_action_action_component__WEBPACK_IMPORTED_MODULE_5__["ActionComponent"], bottomSheetConfig);
+        // const trade: ITrade = {
+        //   code: 'Pennies',
+        //   name: 'PENNY',
+        //   owner: 'TONY',
+        //   stocks: [],
+        // };
+        // const tradeRef = this.db.list('trade');
+        // tradeRef.push(trade);
+    }
+    getStocks(trade) {
+        const tickers = this.getTickers(trade);
         this.loading = true;
         const httpHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]().set('Content-Type', 'application/json');
         const params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpParams"]()
@@ -840,18 +977,20 @@ class HomeComponent {
             responseType: 'json',
             params: params,
         })
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(this.mapResponse), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])((s) => {
-            return _stocks_json__WEBPACK_IMPORTED_MODULE_3__["trade"].map((tr) => (Object.assign(Object.assign({}, tr), { stocks: tr.stocks.map((st) => (Object.assign(Object.assign({}, st), Array.from(Object.values(s)).find((s) => s.symbol === st.ticker)))) })));
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])((trade) => trade.map((tr) => (Object.assign(Object.assign({}, tr), { stocks: tr.stocks
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.mapResponse), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((s) => {
+            return trade.map((tr) => (Object.assign(Object.assign({}, tr), { stocks: tr.stocks
+                    ? tr.stocks.map((st) => (Object.assign(Object.assign({}, st), Array.from(Object.values(s)).find((s) => s.symbol === st.ticker))))
+                    : [] })));
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((trade) => trade.map((tr) => (Object.assign(Object.assign({}, tr), { stocks: tr.stocks
                 .map((s) => (Object.assign(Object.assign({}, s), { perShareProfit: (s.lastPrice - s.cost).toFixed(s.lastPrice < 0.01 ? 5 : 2), isProfit: s.lastPrice - s.cost > 0, profit: ((s.lastPrice - s.cost) * s.count).toFixed(2), adjustShares: s.adjustRate
                     ? this.stocksService
                         .howManySharesToAverage(s, s.adjustRate)
                         .toFixed(2)
                     : null, totalCost: (s.cost * s.count).toFixed(2) })))
-                .sort((s1, s2) => +s2.profit - +s1.profit) })))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["tap"])(() => (this.loading = false)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["catchError"])((e) => {
+                .sort((s1, s2) => +s2.profit - +s1.profit) })))), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["tap"])(() => (this.loading = false)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])((e) => {
             this.loading = false;
             console.error(e);
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(null);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(null);
         }));
     }
     mapResponse(response) {
@@ -871,17 +1010,22 @@ class HomeComponent {
         this.stopPolling.next();
     }
 }
-HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdirectiveInject"](_stocks_service__WEBPACK_IMPORTED_MODULE_4__["StocksService"])); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["money-home"]], decls: 3, vars: 5, consts: [["color", "primary"], [4, "ngFor", "ngForOf", "ngForTrackBy"], ["mat-tab-label", ""], [1, "stocks"], [3, "stocks", "displayedColumns"], [1, "tab-header"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "mat-tab-group", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](1, HomeComponent_mat_tab_1_Template, 4, 2, "mat-tab", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵpipe"](2, "async");
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
+HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_stocks_service__WEBPACK_IMPORTED_MODULE_6__["StocksService"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_fire_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_material_bottom_sheet__WEBPACK_IMPORTED_MODULE_2__["MatBottomSheet"])); };
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["money-home"]], decls: 5, vars: 5, consts: [["mat-raised-button", "", "color", "primary", 3, "click"], ["color", "primary"], [4, "ngFor", "ngForOf", "ngForTrackBy"], ["mat-tab-label", ""], [1, "stocks"], [3, "stocks", "displayedColumns"], [1, "tab-header"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](0, "button", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵlistener"]("click", function HomeComponent_Template_button_click_0_listener() { return ctx.addNewTrade(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtext"](1, " Add New Trade\n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementStart"](2, "mat-tab-group", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵtemplate"](3, HomeComponent_mat_tab_3_Template, 4, 2, "mat-tab", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵpipe"](4, "async");
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("@.disabled", true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵpipeBind1"](2, 3, ctx.trade$))("ngForTrackBy", ctx.trackByTrade);
-    } }, directives: [_angular_material_tabs__WEBPACK_IMPORTED_MODULE_6__["MatTabGroup"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_6__["MatTab"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_6__["MatTabLabel"], _stocks_grid_stocks_grid_component__WEBPACK_IMPORTED_MODULE_8__["StocksGridComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["AsyncPipe"]], styles: [".tab-header[_ngcontent-%COMP%] {\n  font-size: 1rem;\n  font-family: \"Roboto Condensed\";\n}\n\n  .mat-ink-bar {\n  background-color: #00c805 !important;\n}\n\n  .mat-tab-label-active {\n  background-color: #00c805;\n  color: #fff;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n\n.stocks[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock {\n  display: flex;\n  flex-direction: column;\n  border: 1px solid #eee;\n  border-radius: 5px;\n  margin: 5px;\n  min-width: 150px;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .stock__body {\n  padding: 10px;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .stock__body div {\n  padding: 5px 0;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .ticker {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  border-bottom: 1px solid #eee;\n  padding: 10px;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .ticker .ticker-name {\n  font-weight: 500;\n  font-size: 1.3rem;\n  flex: 1;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .actions {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .actions .buy {\n  color: #fff;\n  background: #00c805;\n  border: darkgreen;\n  text-shadow: darkgreen;\n  border-radius: 5px;\n  padding: 8px 10px;\n  margin: 10px;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .actions .sell {\n  color: #fff;\n  background: #ff5000;\n  border: darkred;\n  text-shadow: darkred;\n  border-radius: 5px;\n  padding: 8px 10px;\n  margin: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFBO0VBQ0EsK0JBQUE7QUFDRjs7QUFFQTtFQUNFLG9DQUFBO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBQTtFQUNBLFdBQUE7RUFDQSwyQkFBQTtFQUNBLDRCQUFBO0FBQ0Y7O0FBQ0E7RUFDRSxhQUFBO0VBQ0EsZUFBQTtBQUVGOztBQURFO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0Esc0JBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxnQkFBQTtBQUdKOztBQURJO0VBQ0UsYUFBQTtBQUdOOztBQUZNO0VBQ0UsY0FBQTtBQUlSOztBQUFJO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsMkJBQUE7RUFDQSw2QkFBQTtFQUNBLGFBQUE7QUFFTjs7QUFETTtFQUNFLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxPQUFBO0FBR1I7O0FBQUk7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQUVOOztBQURNO0VBQ0UsV0FBQTtFQUNBLG1CQUFBO0VBQ0EsaUJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxZQUFBO0FBR1I7O0FBRE07RUFDRSxXQUFBO0VBQ0EsbUJBQUE7RUFDQSxlQUFBO0VBQ0Esb0JBQUE7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0VBQ0EsWUFBQTtBQUdSIiwiZmlsZSI6ImhvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGFiLWhlYWRlciB7XG4gIGZvbnQtc2l6ZTogMXJlbTtcbiAgZm9udC1mYW1pbHk6ICdSb2JvdG8gQ29uZGVuc2VkJztcbn1cblxuOjpuZy1kZWVwIC5tYXQtaW5rLWJhciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMGM4MDUgIWltcG9ydGFudDtcbn1cblxuOjpuZy1kZWVwIC5tYXQtdGFiLWxhYmVsLWFjdGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMGM4MDU7XG4gIGNvbG9yOiAjZmZmO1xuICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiA1cHg7XG4gIGJvcmRlci10b3AtcmlnaHQtcmFkaXVzOiA1cHg7XG59XG4uc3RvY2tzIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICA6Om5nLWRlZXAgLnN0b2NrIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2VlZTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgbWFyZ2luOiA1cHg7XG4gICAgbWluLXdpZHRoOiAxNTBweDtcblxuICAgIC5zdG9ja19fYm9keSB7XG4gICAgICBwYWRkaW5nOiAxMHB4O1xuICAgICAgZGl2IHtcbiAgICAgICAgcGFkZGluZzogNXB4IDA7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLnRpY2tlciB7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcbiAgICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZWVlO1xuICAgICAgcGFkZGluZzogMTBweDtcbiAgICAgIC50aWNrZXItbmFtZSB7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gICAgICAgIGZvbnQtc2l6ZTogMS4zcmVtO1xuICAgICAgICBmbGV4OiAxO1xuICAgICAgfVxuICAgIH1cbiAgICAuYWN0aW9ucyB7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgLmJ1eSB7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBiYWNrZ3JvdW5kOiAjMDBjODA1O1xuICAgICAgICBib3JkZXI6IGRhcmtncmVlbjtcbiAgICAgICAgdGV4dC1zaGFkb3c6IGRhcmtncmVlbjtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgICAgICBwYWRkaW5nOiA4cHggMTBweDtcbiAgICAgICAgbWFyZ2luOiAxMHB4O1xuICAgICAgfVxuICAgICAgLnNlbGwge1xuICAgICAgICBjb2xvcjogI2ZmZjtcbiAgICAgICAgYmFja2dyb3VuZDogI2ZmNTAwMDtcbiAgICAgICAgYm9yZGVyOiBkYXJrcmVkO1xuICAgICAgICB0ZXh0LXNoYWRvdzogZGFya3JlZDtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgICAgICBwYWRkaW5nOiA4cHggMTBweDtcbiAgICAgICAgbWFyZ2luOiAxMHB4O1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("@.disabled", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵpipeBind1"](4, 3, ctx.trade$))("ngForTrackBy", ctx.trackByTrade);
+    } }, directives: [_angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_9__["MatTabGroup"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_9__["MatTab"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_9__["MatTabLabel"], _stocks_grid_stocks_grid_component__WEBPACK_IMPORTED_MODULE_11__["StocksGridComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["AsyncPipe"]], styles: [".tab-header[_ngcontent-%COMP%] {\n  font-size: 1rem;\n  font-family: \"Roboto Condensed\";\n}\n\n.stocks[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock {\n  display: flex;\n  flex-direction: column;\n  border: 1px solid #eee;\n  border-radius: 5px;\n  margin: 5px;\n  min-width: 150px;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .stock__body {\n  padding: 10px;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .stock__body div {\n  padding: 5px 0;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .ticker {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  border-bottom: 1px solid #eee;\n  padding: 10px;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .ticker .ticker-name {\n  font-weight: 500;\n  font-size: 1.3rem;\n  flex: 1;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .actions {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .actions .buy {\n  color: #fff;\n  background: #00c805;\n  border: darkgreen;\n  text-shadow: darkgreen;\n  border-radius: 5px;\n  padding: 8px 10px;\n  margin: 10px;\n}\n\n.stocks[_ngcontent-%COMP%]     .stock .actions .sell {\n  color: #fff;\n  background: #ff5000;\n  border: darkred;\n  text-shadow: darkred;\n  border-radius: 5px;\n  padding: 8px 10px;\n  margin: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL2hvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFBO0VBQ0EsK0JBQUE7QUFDRjs7QUFZQTtFQUNFLGFBQUE7RUFDQSxlQUFBO0FBVEY7O0FBVUU7RUFDRSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0FBUko7O0FBVUk7RUFDRSxhQUFBO0FBUk47O0FBU007RUFDRSxjQUFBO0FBUFI7O0FBV0k7RUFDRSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSwyQkFBQTtFQUNBLDZCQUFBO0VBQ0EsYUFBQTtBQVROOztBQVVNO0VBQ0UsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLE9BQUE7QUFSUjs7QUFXSTtFQUNFLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0FBVE47O0FBVU07RUFDRSxXQUFBO0VBQ0EsbUJBQUE7RUFDQSxpQkFBQTtFQUNBLHNCQUFBO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTtFQUNBLFlBQUE7QUFSUjs7QUFVTTtFQUNFLFdBQUE7RUFDQSxtQkFBQTtFQUNBLGVBQUE7RUFDQSxvQkFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxZQUFBO0FBUlIiLCJmaWxlIjoiaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWItaGVhZGVyIHtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBmb250LWZhbWlseTogJ1JvYm90byBDb25kZW5zZWQnO1xufVxuXG4vLyA6Om5nLWRlZXAgLm1hdC1pbmstYmFyIHtcbi8vICAgYmFja2dyb3VuZC1jb2xvcjogIzAwYzgwNSAhaW1wb3J0YW50O1xuLy8gfVxuXG4vLyA6Om5nLWRlZXAgLm1hdC10YWItbGFiZWwtYWN0aXZlIHtcbi8vICAgYmFja2dyb3VuZC1jb2xvcjogIzAwYzgwNTtcbi8vICAgY29sb3I6ICNmZmY7XG4vLyAgIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDVweDtcbi8vICAgYm9yZGVyLXRvcC1yaWdodC1yYWRpdXM6IDVweDtcbi8vIH1cbi5zdG9ja3Mge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIDo6bmctZGVlcCAuc3RvY2sge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZWVlO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBtYXJnaW46IDVweDtcbiAgICBtaW4td2lkdGg6IDE1MHB4O1xuXG4gICAgLnN0b2NrX19ib2R5IHtcbiAgICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgICBkaXYge1xuICAgICAgICBwYWRkaW5nOiA1cHggMDtcbiAgICAgIH1cbiAgICB9XG5cbiAgICAudGlja2VyIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAganVzdGlmeS1jb250ZW50OiBmbGV4LXN0YXJ0O1xuICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlZWU7XG4gICAgICBwYWRkaW5nOiAxMHB4O1xuICAgICAgLnRpY2tlci1uYW1lIHtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgICAgICAgZm9udC1zaXplOiAxLjNyZW07XG4gICAgICAgIGZsZXg6IDE7XG4gICAgICB9XG4gICAgfVxuICAgIC5hY3Rpb25zIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAuYnV5IHtcbiAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgIGJhY2tncm91bmQ6ICMwMGM4MDU7XG4gICAgICAgIGJvcmRlcjogZGFya2dyZWVuO1xuICAgICAgICB0ZXh0LXNoYWRvdzogZGFya2dyZWVuO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgICAgIHBhZGRpbmc6IDhweCAxMHB4O1xuICAgICAgICBtYXJnaW46IDEwcHg7XG4gICAgICB9XG4gICAgICAuc2VsbCB7XG4gICAgICAgIGNvbG9yOiAjZmZmO1xuICAgICAgICBiYWNrZ3JvdW5kOiAjZmY1MDAwO1xuICAgICAgICBib3JkZXI6IGRhcmtyZWQ7XG4gICAgICAgIHRleHQtc2hhZG93OiBkYXJrcmVkO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgICAgIHBhZGRpbmc6IDhweCAxMHB4O1xuICAgICAgICBtYXJnaW46IDEwcHg7XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */"] });
 
 
 /***/ }),
