@@ -1,5 +1,5 @@
 <form class="action-form">
-  <h2 class="action__header">ADD TRADE</h2>
+  <h2 class="action__header">Add Trade</h2>
   <mat-form-field class="example-full-width">
     <mat-label>Code</mat-label>
     <input #code matInput placeholder="Code" autocomplete="off" />
@@ -13,8 +13,10 @@
     <input #owner matInput placeholder="Owner" autocomplete="off" />
   </mat-form-field>
   <button
+    trade__button
     mat-raised-button
     color="primary"
+    class="trade__button"
     (click)="addNewTrade(code.value, name.value, owner.value)"
   >
     Add

@@ -26,6 +26,18 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { ActionComponent } from './action/action.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { UpdateStockComponent } from './update-stock/update-stock.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {
+  popperVariation,
+  TippyModule,
+  tooltipVariation,
+  withContextMenuVariation,
+} from '@ngneat/helipopper';
 
 @NgModule({
   declarations: [
@@ -36,6 +48,7 @@ import { MatInputModule } from '@angular/material/input';
     BuySellProgressComponent,
     StocksGridComponent,
     ActionComponent,
+    UpdateStockComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +69,29 @@ import { MatInputModule } from '@angular/material/input';
     MatBottomSheetModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatNativeDateModule,
+    MatSidenavModule,
+    TippyModule.forRoot({
+      defaultVariation: 'tooltip',
+      variations: {
+        tooltip: tooltipVariation,
+        popper: popperVariation,
+        menu: {
+          ...popperVariation,
+          appendTo: 'parent',
+          arrow: false,
+          offset: [0, 0],
+        },
+        contextMenu: withContextMenuVariation(popperVariation),
+        popperBorder: {
+          ...popperVariation,
+          theme: 'light',
+        },
+      },
+    }),
   ],
   exports: [BrowserAnimationsModule],
   bootstrap: [AppComponent],

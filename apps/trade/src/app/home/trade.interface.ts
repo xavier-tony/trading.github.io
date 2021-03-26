@@ -5,6 +5,7 @@ export interface IEvent {
 }
 export interface IStock {
   ticker: string;
+  tradeName?: string;
   cost: number;
   count: number;
   max: number;
@@ -24,9 +25,25 @@ export interface IStock {
   isProfit?: boolean;
   adjustRate?: number;
   adjustShares?: number;
-  expires?: string;
+  expires?: {
+    date?: string;
+    description?: string;
+    remainingDays?: number;
+  };
+  divident?: boolean;
   earnings?: string;
   events?: IEvent[];
+  strikeRate?: number;
+  strike?: boolean;
+  sellRate?: number;
+  sell?: boolean;
+  remainingDays?: number;
+  ipo?: {
+    date?: string;
+    rate?: number;
+    description?: string;
+    remainingDays?: number;
+  };
 }
 export interface ITrade {
   name: string;

@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
-import { IStock } from './home/trade.interface';
+import { Subject } from 'rxjs';
+import { IStock, ITrade } from './home/trade.interface';
 
 @Injectable({ providedIn: 'root' })
 export class StocksService {
+  openSidenav$ = new Subject<boolean>();
+  addNewTrade$ = new Subject<Partial<ITrade>>();
   howManySharesToAverage(stock: IStock, expectedRate: number) {
     if (!stock || !expectedRate) return 0;
     //throw new Error('Values cannot be null');

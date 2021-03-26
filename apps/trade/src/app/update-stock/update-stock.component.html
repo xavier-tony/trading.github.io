@@ -1,0 +1,31 @@
+<form class="update-form">
+  <h2 class="update__header">Add Stock</h2>
+  <mat-form-field class="padd__15">
+    <mat-label>Ticker</mat-label>
+    <input #code matInput placeholder="Code" autocomplete="off" />
+  </mat-form-field>
+  <mat-form-field class="padd__15">
+    <mat-label>Cost</mat-label>
+    <input #name matInput placeholder="Name" autocomplete="off" />
+  </mat-form-field>
+  <mat-form-field class="padd__15">
+    <mat-label>Count</mat-label>
+    <input #count matInput placeholder="Owner" autocomplete="off" />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="padd__15">
+    <mat-label>Expires</mat-label>
+    <input matInput [matDatepicker]="picker" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-radio-button value="true" class="padd__15">Long term</mat-radio-button>
+  <button
+    trade__button
+    mat-raised-button
+    color="primary"
+    class="trade__button padd__15"
+    (click)="updateStock(code.value, name.value, count.value)"
+  >
+    Add
+  </button>
+</form>

@@ -3,6 +3,9 @@
   font-family: 'Roboto Condensed';
 }
 
+.left__sidenav {
+  min-width: 300px;
+}
 // ::ng-deep .mat-ink-bar {
 //   background-color: #00c805 !important;
 // }
@@ -66,5 +69,25 @@
         margin: 10px;
       }
     }
+  }
+}
+
+.strike__stock {
+  background: linear-gradient(#f1f1f1, #fff);
+  border: 1px solid #eee;
+  padding: 10px;
+  display: flex;
+  .strike__ticker {
+    flex: 1;
+  }
+}
+.action__container {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  .stock__action {
+    padding: 0 5px;
+    color: #fff;
+    border-radius: 3px;
   }
 }

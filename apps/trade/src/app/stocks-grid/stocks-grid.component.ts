@@ -12,8 +12,10 @@ import {
   ViewChild,
   AfterViewInit,
   OnChanges,
+  Output,
+  EventEmitter,
 } from '@angular/core';
-import { IStock } from '../home/trade.interface';
+import { IStock, ITrade } from '../home/trade.interface';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -35,8 +37,12 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class StocksGridComponent implements AfterViewInit, OnChanges {
   @Input() displayedColumns: string[];
-  @Input() stocks: IStock[];
+  @Input() trade: ITrade;
   @ViewChild(MatSort) sort: MatSort;
+  @Output() moveToWatchListEvent = new EventEmitter();
+  @Output() deleteEvent = new EventEmitter();
+  @Output() editEvent = new EventEmitter();
+  @Output() addEvent = new EventEmitter();
   dataSource;
 
   ngAfterViewInit() {
@@ -44,9 +50,27 @@ export class StocksGridComponent implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges() {
-    this.dataSource = new MatTableDataSource(this.stocks);
+    this.dataSource = new MatTableDataSource(this.trade.stocks);
+    this.dataSource.sort = this.sort;
+  }
+
+  add(e: MouseEvent) {
+    this.addEvent.emit();
+    e.stopPropagation();
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   trackByStock = (index, stock: IStock) => index;
+
+  moveToWatchList(stock: IStock) {
+    this.moveToWatchListEvent.emit(stock);
+  }
+
+  delete(stock: IStock) {
+    this.deleteEvent.emit(stock);
+  }
+
+  edit(stock: IStock) {
+    this.editEvent.emit(stock);
+  }
 }

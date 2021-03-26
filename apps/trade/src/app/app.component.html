@@ -1,6 +1,12 @@
 <main>
   <header class="header">
+    <button mat-icon-button (click)="open()" aria-label="edit">
+      <mat-icon>menu</mat-icon>
+    </button>
     <h1>STOCKS</h1>
+    <button mat-button class="trade__button" (click)="addNewTrade()">
+      Add New Trade
+    </button>
   </header>
   <div class="container">
     <router-outlet></router-outlet>

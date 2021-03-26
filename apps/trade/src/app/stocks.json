@@ -1,10 +1,591 @@
 {
   "trade": [
     {
-      "name": "AMERITRADE",
+      "name": "Tomorrow",
+      "owner": "TONY",
+      "code": "TOMORROW",
+      "stocks": [
+        {
+          "ticker": "T",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "divident": true,
+          "adjustRate": null,
+          "strikeRate": null
+        },
+        {
+          "ticker": "BGS",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "divident": true,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": null
+        },
+        {
+          "ticker": "FTFT",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 5
+        },
+        {
+          "ticker": "AITX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "QCOM",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "MAIN",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "T",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "divident": true,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "CSWC",
+          "cost": null,
+          "count": null,
+          "divident": true,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "RVLV",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "DIS",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "NIO",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "AAPL",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "FB",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "NKE",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "TSLA",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "PLUG",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "FCEL",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "DKNG",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "CHPT",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "APXT",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "DBX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "AAL",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "WFC",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "GNOG",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "WBA",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "TTCF",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "PLTR",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "IDEX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "V",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "CRWD",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "SQ",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "BNGO",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "FTFT",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "GNUS",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "ARDX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": {
+            "date": "04/29/2021"
+          },
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "PLX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": {
+            "date": "04/27/2021"
+          },
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "COINBASE",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "ipo": {
+            "date": "04/14/2021",
+            "rate": 300,
+            "description": "Coinbase is expected to to have a rate around 300+"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Webull Tony IRA",
+      "owner": "TONY",
+      "code": "WE_TX_IRA",
+      "stocks": [
+        {
+          "ticker": "FBIO",
+          "cost": 5.88,
+          "count": 80,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 5.8
+        },
+        {
+          "ticker": "BLUE",
+          "cost": 29.1,
+          "count": 20,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": null
+        },
+        {
+          "ticker": "BNGO",
+          "cost": 8.037,
+          "count": 300,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 7.5
+        },
+        {
+          "ticker": "CCIV",
+          "cost": 22.5,
+          "count": 150,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 21.5
+        },
+        {
+          "ticker": "CHPT",
+          "cost": 21.52,
+          "count": 150,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 20.5
+        },
+        {
+          "ticker": "GEVO",
+          "cost": 8.367,
+          "count": 150,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 7.5
+        },
+        {
+          "ticker": "NIO",
+          "cost": 37.838,
+          "count": 150,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 37
+        },
+        {
+          "ticker": "PLTR",
+          "cost": 22.571,
+          "count": 70,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 21
+        },
+        {
+          "ticker": "RIOT",
+          "cost": 47.683,
+          "count": 60,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 46
+        },
+        {
+          "ticker": "VERU",
+          "cost": 11.339,
+          "count": 20,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 10.5
+        }
+      ]
+    },
+    {
+      "name": "Ameritrade",
       "owner": "TONY",
       "code": "AM_TX",
       "stocks": [
+        {
+          "ticker": "RIOT",
+          "cost": 61.375,
+          "count": 60,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": 52,
+          "strikeRate": 50
+        },
+        {
+          "ticker": "ATOS",
+          "cost": 2.86,
+          "count": 5000,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "adjustRate": 2.5,
+          "strikeRate": 2,
+          "events": []
+        },
         {
           "ticker": "SPPI",
           "cost": 4.09,
@@ -13,7 +594,8 @@
           "min": null,
           "position": true,
           "expires": null,
-          "adjustRate": 3.8,
+          "adjustRate": 3.5,
+          "strikeRate": 2.9,
           "events": []
         },
         {
@@ -24,20 +606,13 @@
           "min": 1.5,
           "position": true,
           "expires": null,
+          "adjustRate": 1.6,
+          "strikeRate": 1,
           "events": []
         },
         {
-          "ticker": "AMC",
-          "cost": 10.039376,
-          "count": 949,
-          "max": 15,
-          "min": 7.6,
-          "position": true,
-          "expires": "03/12/2021",
-          "adjustRate": 9.5,
-          "events": []
-        },
-        {
+          "adjustRate": 12.5,
+          "strikeRate": 11,
           "ticker": "APXT",
           "cost": 15,
           "count": 100,
@@ -153,8 +728,8 @@
         },
         {
           "ticker": "LIFE",
-          "cost": 6.25262,
-          "count": 103,
+          "cost": 5.22,
+          "count": 203,
           "max": null,
           "min": null,
           "position": true
@@ -262,7 +837,7 @@
       ]
     },
     {
-      "name": "WEBULL(Email)",
+      "name": "Webull(Email)",
       "owner": "TONY",
       "code": "WE_TX(E)",
       "stocks": [
@@ -274,7 +849,8 @@
           "min": null,
           "position": true,
           "expires": null,
-          "events": []
+          "events": [],
+          "strikeRate": 7.5
         },
         {
           "ticker": "PHCF",
@@ -304,7 +880,9 @@
           "min": null,
           "position": true,
           "expires": null,
-          "events": []
+          "events": [],
+          "strikeRate": 21.5,
+          "adjustRate": 28
         },
         {
           "ticker": "CTRM",
@@ -314,7 +892,9 @@
           "min": null,
           "position": true,
           "expires": null,
-          "events": []
+          "events": [],
+          "strikeRate": 0.75,
+          "adjustRate": 0.9
         },
         {
           "ticker": "ZOM",
@@ -324,7 +904,9 @@
           "min": null,
           "position": true,
           "expires": null,
-          "events": []
+          "events": [],
+          "strikeRate": 1,
+          "adjustRate": 1.5
         },
         {
           "ticker": "GILT",
@@ -334,7 +916,9 @@
           "min": null,
           "position": true,
           "expires": null,
-          "events": []
+          "events": [],
+          "strikeRate": 10.5,
+          "adjustRate": 12
         },
         {
           "ticker": "TRCH",
@@ -344,7 +928,9 @@
           "min": null,
           "position": true,
           "expires": null,
-          "events": []
+          "events": [],
+          "strikeRate": 1.75,
+          "adjustRate": 2
         },
         {
           "ticker": "HYLN",
@@ -409,7 +995,7 @@
       ]
     },
     {
-      "name": "WEBULL(Mobile)",
+      "name": "Webull(Mobile)",
       "owner": "TONY",
       "code": "WE_TX(M)",
       "stocks": [
@@ -421,15 +1007,28 @@
           "min": null,
           "position": true,
           "expires": null,
+          "strikeRate": 13.5,
           "events": []
         }
       ]
     },
     {
-      "name": "WEBULL",
+      "name": "Webull Vineetha",
       "owner": "VINEETHA",
       "code": "WE_VI",
       "stocks": [
+        {
+          "ticker": "FBIO",
+          "cost": 5.88,
+          "count": 100,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 5.8
+        },
         {
           "ticker": "BNGO",
           "cost": 6.9,
@@ -484,7 +1083,7 @@
       ]
     },
     {
-      "name": "ROBINHOOD",
+      "name": "Robinhood Tony",
       "owner": "TONY",
       "code": "RB_TX",
       "stocks": [
@@ -544,7 +1143,7 @@
       ]
     },
     {
-      "name": "ROBINHOOD",
+      "name": "Robinhood Vineetha",
       "owner": "VINEETHA",
       "code": "RB_VI",
       "stocks": [
@@ -561,7 +1160,7 @@
       ]
     },
     {
-      "name": "ETRADE",
+      "name": "Etrade",
       "owner": "VINEETHA",
       "code": "ET_VI",
       "stocks": [
@@ -618,18 +1217,10 @@
       ]
     },
     {
-      "name": "WATCHLIST",
+      "name": "Watchlist",
       "owner": "TONY",
       "code": "WA_TX",
       "stocks": [
-        {
-          "ticker": "ATOS",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": false
-        },
         {
           "ticker": "ORLA",
           "cost": null,

@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '~tippy.js/dist/tippy.css';
+@import '~tippy.js/themes/light.css';
+@import '~tippy.js/animations/scale.css';
+
 body,
 html {
   padding: 0;
@@ -16,4 +20,87 @@ html {
 
 .green {
   color: #00c805;
+}
+
+.light-gray {
+  color: #a5a2a2;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.green__background {
+  background: #00c805;
+}
+
+.red__background {
+  background: #ff5000;
+}
+
+.stretch-badge > .mat-badge-content {
+  width: auto;
+  min-width: 25px;
+  padding: 2px;
+  right: unset !important;
+}
+
+.trade__button {
+  min-height: 50px;
+}
+
+.header {
+  min-height: 50px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  display: flex;
+  padding: 0 10px;
+  background: #1f4d80;
+  color: #fff;
+  h1 {
+    flex: 1;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@keyframes glowing {
+  100% {
+    background-color: #ff5000;
+    box-shadow: 0 0 5px #ff3300;
+  }
+  50% {
+    background-color: #ff3300;
+    box-shadow: 0 0 10px #ff3300;
+  }
+  0% {
+    background-color: #f44336;
+    box-shadow: 0 0 5px #f44336;
+  }
+}
+
+.glow {
+  animation: glowing 1300ms infinite;
+}
+
+.flip {
+  -webkit-animation: rotate-div 1.2s infinite ease-in-out;
+  animation: rotate-div 1.2s infinite ease-in-out;
+}
+
+@keyframes flipper {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
 }

@@ -4,13 +4,27 @@
   [trackBy]="trackByStock"
   matSort
 >
-  <ng-container matColumnDef="ticker">
+  <ng-container matColumnDef="ticker" sticky>
     <mat-header-cell *matHeaderCellDef mat-sort-header>
-      TICKER
+      <button mat-icon-button (click)="add($event)" aria-label="add stock">
+        <mat-icon>add</mat-icon></button
+      >TICKER
     </mat-header-cell>
     <mat-cell class="grid__ticker" *matCellDef="let row">
       <div>{{ row.ticker }}</div>
       <div class="grid-ticker__count">{{ row.count }}</div>
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastPrice" sticky>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>
+      LAST PRICE
+    </mat-header-cell>
+    <mat-cell
+      *matCellDef="let row"
+      [class.green]="row.isProfit"
+      [class.red]="!row.isProfit"
+    >
+      {{ row.lastPrice }} ({{ row.perShareProfit }})
     </mat-cell>
   </ng-container>
   <ng-container matColumnDef="cost">
@@ -23,19 +37,6 @@
       TOTAL COST
     </mat-header-cell>
     <mat-cell *matCellDef="let row"> {{ row.totalCost }} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="lastPrice">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>
-      LAST PRICE
-    </mat-header-cell>
-    <mat-cell
-      *matCellDef="let row"
-      [class.green]="row.isProfit"
-      [class.red]="!row.isProfit"
-    >
-      {{ row.lastPrice }} ({{ row.perShareProfit }})
-    </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="profit">
@@ -61,24 +62,63 @@
       {{ row.lastPrice < row.cost ? 'Average' : 'Sell off/Hold' }}
     </mat-cell>
   </ng-container>
-  <ng-container matColumnDef="min">
+  <!-- <ng-container matColumnDef="min">
     <mat-header-cell *matHeaderCellDef> MIN </mat-header-cell>
     <mat-cell *matCellDef="let row"> {{ row.min }} </mat-cell>
   </ng-container>
   <ng-container matColumnDef="max">
     <mat-header-cell *matHeaderCellDef> MAX </mat-header-cell>
     <mat-cell *matCellDef="let row"> {{ row.max }} </mat-cell>
-  </ng-container>
+  </ng-container> -->
   <ng-container matColumnDef="adjustShares">
     <mat-header-cell *matHeaderCellDef> Adjust Shares </mat-header-cell>
     <mat-cell *matCellDef="let row">
-      <mat-chip-list *ngIf="row.adjustRate">
+      <span
+        class="stretch-badge"
+        [matBadge]="row.adjustRate"
+        matBadgeOverlap="false"
+      >
+        {{ row.adjustShares }} {{ !!row.adjustRate ? '|' : '' }}
+        {{ row.adjustShares * row.adjustRate | currency }}
+      </span>
+
+      <!-- <mat-chip-list *ngIf="row.adjustRate">
         <mat-chip color="primary" selected>{{ row.adjustRate }}</mat-chip>
         <mat-chip color="accent" selected>{{ row.adjustShares }}</mat-chip>
         <mat-chip color="warn" selected>{{
           row.adjustShares * row.adjustRate | currency
         }}</mat-chip>
-      </mat-chip-list>
+      </mat-chip-list> -->
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button
+        mat-icon-button
+        color="primary"
+        (click)="edit(row)"
+        aria-label="edit"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        color="accent"
+        (click)="moveToWatchList(row)"
+        aria-label="move to watchlist"
+      >
+        <mat-icon>drive_file_move</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        (click)="delete(row)"
+        color="warn"
+        aria-label="delete icon"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-cell>
   </ng-container>
 

@@ -8,6 +8,7 @@ import {
 import { Observable, of, Subject, timer } from 'rxjs';
 import {
   catchError,
+  first,
   map,
   retry,
   share,
@@ -17,7 +18,9 @@ import {
 } from 'rxjs/operators';
 import { ActionComponent } from '../action/action.component';
 import { StocksService } from '../stocks.service';
+import { UpdateStockComponent } from '../update-stock/update-stock.component';
 import { IResponse, IStock, ITrade } from './trade.interface';
+import { trade } from '../stocks.json';
 
 @Component({
   selector: 'money-home',
@@ -25,21 +28,24 @@ import { IResponse, IStock, ITrade } from './trade.interface';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  openSidenav = true;
   trade$: Observable<ITrade>;
   private stopPolling = new Subject();
   loading = false;
   stocks$: Observable<ITrade[]>;
   displayedColumns: string[] = [
     'ticker',
+    'lastPrice',
     'cost',
     'totalcost',
-    'lastPrice',
     'profit',
-    'Buy/Sell',
-    'min',
-    'max',
+    // 'Buy/Sell',
+    // 'min',
+    // 'max',
     'adjustShares',
+    'action',
   ];
+  actionStocks: IStock[] = [];
   constructor(
     private http: HttpClient,
     private stocksService: StocksService,
@@ -48,15 +54,35 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.stocks$ = this.db.list<ITrade>('trade').valueChanges();
+    // this.stocks$ = this.db.list<ITrade>('trade').valueChanges();
+    this.stocks$ = of(trade);
+
     this.trade$ = timer(1, 2000).pipe(
+      // tap(() => (this.actionStocks = [])),
       switchMap(() => this.stocks$),
       switchMap((trade) => this.getStocks(trade)),
-      tap((s) => console.log('x', s)),
+      tap(() => console.log(this.actionStocks)),
       retry(),
       share(),
       takeUntil(this.stopPolling)
     );
+
+    this.stocksService.openSidenav$
+      .asObservable()
+      .pipe(
+        tap(console.log),
+        tap((x) => (this.openSidenav = x))
+      )
+      .subscribe();
+
+    this.stocksService.addNewTrade$
+      .asObservable()
+      .pipe(tap(() => this.addNewTrade()))
+      .subscribe();
+  }
+
+  close() {
+    this.openSidenav = false;
   }
 
   trackByTrade = (index, trade) => index;
@@ -88,6 +114,51 @@ export class HomeComponent implements OnInit, OnDestroy {
     // tradeRef.push(trade);
   }
 
+  onAddStock(stock: Partial<IStock>) {
+    const bottomSheetConfig: MatBottomSheetConfig = {
+      autoFocus: true,
+      data: {
+        tradeRef: this.db.list('trade'),
+        stock: stock,
+        action: 'ADD',
+      },
+    };
+    this.bottomSheet.open(UpdateStockComponent, bottomSheetConfig);
+  }
+
+  onEditStock(stock: Partial<IStock>) {
+    const bottomSheetConfig: MatBottomSheetConfig = {
+      autoFocus: true,
+      data: {
+        tradeRef: this.db.list('trade'),
+        stock: stock,
+        action: 'EDIT',
+      },
+    };
+    this.bottomSheet.open(UpdateStockComponent, bottomSheetConfig);
+  }
+
+  onMoveToWatchList(stock: Partial<IStock>) {
+    const bottomSheetConfig: MatBottomSheetConfig = {
+      autoFocus: true,
+      data: {
+        tradeRef: this.db.list('trade'),
+        stock: stock,
+        action: 'MOVE',
+      },
+    };
+    this.bottomSheet.open(UpdateStockComponent, bottomSheetConfig);
+  }
+
+  onDeleteStock(stock: IStock, platform: string) {
+    console.log(stock);
+    this.stocks$.pipe(first()).subscribe((stocks) => {
+      const st = stocks.find((s) => s.name === stock.tradeName);
+      st.stocks = st.stocks.filter((sto) => sto.ticker !== stock.ticker);
+      this.db.list('trade').update(st, { stocks: st.stocks });
+    });
+  }
+
   getStocks(trade: ITrade[]) {
     const tickers = this.getTickers(trade);
 
@@ -113,6 +184,7 @@ export class HomeComponent implements OnInit, OnDestroy {
             stocks: tr.stocks
               ? tr.stocks.map((st: IStock) => ({
                   ...st,
+                  tradeName: tr.name,
                   ...Array.from(Object.values(s)).find(
                     (s: IResponse) => s.symbol === st.ticker
                   ),
@@ -124,20 +196,26 @@ export class HomeComponent implements OnInit, OnDestroy {
           trade.map((tr) => ({
             ...tr,
             stocks: tr.stocks
-              .map((s) => ({
-                ...s,
-                perShareProfit: (s.lastPrice - s.cost).toFixed(
-                  s.lastPrice < 0.01 ? 5 : 2
-                ),
-                isProfit: s.lastPrice - s.cost > 0,
-                profit: ((s.lastPrice - s.cost) * s.count).toFixed(2),
-                adjustShares: s.adjustRate
-                  ? this.stocksService
-                      .howManySharesToAverage(s, s.adjustRate)
-                      .toFixed(2)
-                  : null,
-                totalCost: (s.cost * s.count).toFixed(2),
-              }))
+              .map((s) => {
+                if (s.lastPrice <= s.strikeRate) this.addStrikeStocks(s);
+                if (s.lastPrice >= s.sellRate) this.addSellStocks(s);
+                this.addDeadline(s);
+                this.addIpo(s);
+                return {
+                  ...s,
+                  perShareProfit: (s.lastPrice - s.cost).toFixed(
+                    s.lastPrice < 0.01 ? 5 : 2
+                  ),
+                  isProfit: s.lastPrice - s.cost > 0,
+                  profit: ((s.lastPrice - s.cost) * s.count).toFixed(2),
+                  adjustShares: s.adjustRate
+                    ? this.stocksService
+                        .howManySharesToAverage(s, s.adjustRate)
+                        .toFixed(2)
+                    : null,
+                  totalCost: (s.cost * s.count).toFixed(2),
+                };
+              })
               .sort((s1, s2) => +s2.profit - +s1.profit),
           }))
         ),
@@ -148,6 +226,110 @@ export class HomeComponent implements OnInit, OnDestroy {
           return of(null);
         })
       );
+  }
+
+  addIpo(stock: IStock) {
+    if (stock.ipo && stock.ipo.date) {
+      const dateDifference = this.difference(
+        new Date(),
+        new Date(stock.ipo.date)
+      );
+      if (dateDifference >= 0) {
+        const stockExist = this.actionStocks.find(
+          (ss) => ss.ticker === stock.ticker && ss.tradeName === stock.tradeName
+        );
+        if (stockExist) {
+          this.actionStocks = [
+            ...this.actionStocks.filter(
+              (ss) =>
+                ss.ticker !== stock.ticker && ss.tradeName !== stock.tradeName
+            ),
+            { ...stock, ipo: { ...stock.ipo, remainingDays: dateDifference } },
+          ];
+        } else {
+          this.actionStocks.push({
+            ...stock,
+            ipo: { ...stock.ipo, remainingDays: dateDifference },
+          });
+        }
+      }
+    }
+  }
+
+  addDeadline(stock: IStock) {
+    if (stock.expires && stock.expires.date) {
+      const dateDifference = this.difference(
+        new Date(),
+        new Date(stock.expires.date)
+      );
+      if (dateDifference >= 0) {
+        const stockExist = this.actionStocks.find(
+          (ss) => ss.ticker === stock.ticker && ss.tradeName === stock.tradeName
+        );
+        if (stockExist) {
+          this.actionStocks = [
+            ...this.actionStocks.filter(
+              (ss) =>
+                ss.ticker !== stock.ticker && ss.tradeName !== stock.tradeName
+            ),
+            {
+              ...stock,
+              expires: { ...stock.expires, remainingDays: dateDifference },
+            },
+          ];
+        } else {
+          this.actionStocks.push({
+            ...stock,
+            expires: { ...stock.expires, remainingDays: dateDifference },
+          });
+        }
+      }
+    }
+  }
+
+  difference(date1, date2) {
+    return +((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24)).toFixed(
+      1
+    );
+  }
+
+  addStrikeStocks(strikeStock: IStock) {
+    const stockExist = this.actionStocks.find(
+      (ss) =>
+        ss.ticker === strikeStock.ticker &&
+        ss.tradeName === strikeStock.tradeName
+    );
+    if (stockExist) {
+      this.actionStocks = [
+        ...this.actionStocks.filter(
+          (ss) =>
+            ss.ticker !== strikeStock.ticker &&
+            ss.tradeName !== strikeStock.tradeName
+        ),
+        { ...strikeStock, strike: true },
+      ];
+    } else {
+      this.actionStocks.push({ ...strikeStock, strike: true });
+    }
+  }
+
+  addSellStocks(sellStock: IStock) {
+    const stockExist = this.actionStocks.find(
+      (ss) =>
+        ss.ticker === sellStock.ticker && ss.tradeName === sellStock.tradeName
+    );
+    if (stockExist) {
+      this.actionStocks = [
+        ...this.actionStocks.filter(
+          (ss) =>
+            ss.ticker !== sellStock.ticker &&
+            ss.tradeName !== sellStock.tradeName
+        ),
+        { ...sellStock, sell: true },
+      ];
+    } else {
+      this.actionStocks.push({ ...sellStock, sell: true });
+    }
   }
 
   mapResponse(response: any[]): IResponse[] {

@@ -1,20 +1,100 @@
-<button mat-raised-button color="primary" (click)="addNewTrade()">
-  Add New Trade
-</button>
-<mat-tab-group color="primary" [@.disabled]="true">
-  <mat-tab
-    *ngFor="let trade of trade$ | async; let i = index; trackBy: trackByTrade"
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [opened]="openSidenav"
+    [fixedInViewport]="true"
+    [fixedTopGap]="0"
+    [fixedBottomGap]="0"
+    class="left__sidenav"
   >
-    <ng-template mat-tab-label
-      ><div class="tab-header">
-        {{ trade.code }}
-      </div></ng-template
-    >
-    <div class="stocks">
-      <money-stocks-grid
-        [stocks]="trade.stocks"
-        [displayedColumns]="displayedColumns"
-      ></money-stocks-grid>
+    <header class="header">
+      <h1>ACTION STOCKS</h1>
+      <button mat-icon-button (click)="close()" aria-label="edit">
+        <mat-icon>menu_open</mat-icon>
+      </button>
+    </header>
+    <div class="strike__stocks">
+      <div
+        class="strike__stock"
+        *ngFor="let actionStock of actionStocks; trackBy: trackByStock"
+      >
+        <div class="strike__ticker">
+          <div>{{ actionStock.ticker }}</div>
+          <div class="light-gray small">{{ actionStock.tradeName }}</div>
+        </div>
+
+        <div *ngIf="actionStock?.ipo?.date" class="ipo">
+          <button
+            mat-mini-fab
+            [tippy]="
+              'IPO Launch date : <b>' + (actionStock?.ipo?.date | date) + '</b>'
+            "
+            variation="popper"
+            placement="right"
+            [color]="actionStock?.ipo?.remainingDays < 6 ? 'warn' : 'info'"
+          >
+            {{ actionStock?.ipo?.remainingDays }}
+          </button>
+        </div>
+        <div *ngIf="actionStock?.expires?.remainingDays" class="days">
+          <button
+            mat-mini-fab
+            [tippy]="
+              'Expiry : <b>' + (actionStock?.expires?.date | date) + '</b>'
+            "
+            variation="popper"
+            placement="right"
+            [color]="actionStock?.expires?.remainingDays < 6 ? 'warn' : 'info'"
+          >
+            {{ actionStock?.expires?.remainingDays }}
+          </button>
+        </div>
+        <div class="action__container">
+          <button color="warn" mat-flat-button *ngIf="actionStock.strike">
+            BUY < {{ actionStock.strikeRate }}
+          </button>
+          <button mat-stroked-flat color="primary" *ngIf="actionStock.sell">
+            SELL > {{ actionStock.sellRate }}
+          </button>
+        </div>
+        <div *ngIf="actionStock.sell">
+          <div class="green">{{ actionStock.lastPrice }}</div>
+          <div class="light-gray small">{{ actionStock.cost }}</div>
+        </div>
+        <div *ngIf="actionStock.strike">
+          <div class="green">{{ actionStock.lastPrice }}</div>
+          <div class="light-gray small">{{ actionStock.cost }}</div>
+        </div>
+      </div>
     </div>
-  </mat-tab>
-</mat-tab-group>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-tab-group color="primary" [@.disabled]="true">
+      <mat-tab
+        *ngFor="
+          let trade of trade$ | async;
+          let i = index;
+          trackBy: trackByTrade
+        "
+      >
+        <ng-template mat-tab-label
+          ><div class="tab-header">
+            {{ trade.name }}
+          </div></ng-template
+        >
+        <div class="stocks">
+          <money-stocks-grid
+            [trade]="trade"
+            [displayedColumns]="displayedColumns"
+            (moveToWatchListEvent)="onMoveToWatchList($event)"
+            (deleteEvent)="onDeleteStock($event)"
+            (editEvent)="onEditStock($event)"
+            (addEvent)="onAddStock($event)"
+          ></money-stocks-grid>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-sidenav-content>
+</mat-sidenav-container>
