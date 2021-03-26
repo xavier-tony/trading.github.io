@@ -18,5 +18,34 @@ html {
 .green {
   color: #00c805;
 }
+.light-gray {
+  color: #a5a2a2;
+}
+.small {
+  font-size: 0.8rem;
+}
+.trade__button {
+  min-height: 50px;
+}
+.header {
+  min-height: 50px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  display: flex;
+  padding: 0 10px;
+  background: #1f4d80;
+  color: #fff;
+}
+.header h1 {
+  flex: 1;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
 
 /*# sourceMappingURL=styles.css.map*/
