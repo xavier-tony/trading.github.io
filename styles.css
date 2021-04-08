@@ -24,6 +24,18 @@ html {
 .small {
   font-size: 0.8rem;
 }
+.green__background {
+  background: #00c805;
+}
+.red__background {
+  background: #ff5000;
+}
+.stretch-badge > .mat-badge-content {
+  width: auto;
+  min-width: 25px;
+  padding: 2px;
+  right: unset !important;
+}
 .trade__button {
   min-height: 50px;
 }
