@@ -1,6 +1,9 @@
 .tab-header {
   font-size: 1rem;
   font-family: 'Roboto Condensed';
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .left__sidenav {
@@ -90,4 +93,8 @@
     color: #fff;
     border-radius: 3px;
   }
+}
+
+.logo {
+  margin-right: 10px;
 }

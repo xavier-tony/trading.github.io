@@ -104,3 +104,19 @@ html {
     -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
   }
 }
+
+.mat-tab-label {
+  &.mat-tab-label-active {
+    opacity: 1;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -4,6 +4,12 @@
       "name": "Tomorrow",
       "owner": "TONY",
       "code": "TOMORROW",
+      "logo": {
+        "icon": "monetization_on",
+        "height": 30,
+        "width": 30,
+        "color": "#1CCA1A"
+      },
       "stocks": [
         {
           "ticker": "T",
@@ -434,126 +440,269 @@
       "name": "Webull Tony IRA",
       "owner": "TONY",
       "code": "WE_TX_IRA",
+      "logo": {
+        "url": "/assets/webull.png",
+        "height": 40,
+        "width": 40
+      },
       "stocks": [
         {
           "ticker": "FBIO",
-          "cost": 5.88,
-          "count": 80,
+          "cost": 5.63,
+          "count": 600,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [
+            {
+              "name": "FDA Approval",
+              "description": "Upcoming fda approval"
+            }
+          ],
+          "adjustRate": 3.5,
+          "strikeRate": 2.8
+        },
+        {
+          "ticker": "BNGO",
+          "cost": 7.52,
+          "count": 700,
           "max": null,
           "min": null,
           "position": true,
           "expires": null,
           "events": [],
-          "adjustRate": null,
-          "strikeRate": 5.8
+          "adjustRate": 5.5,
+          "strikeRate": 5
         },
         {
-          "ticker": "BLUE",
-          "cost": 29.1,
+          "ticker": "MVIS",
+          "cost": 16.2,
+          "count": 200,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [
+            {
+              "name": "DANGER",
+              "description": "BEWARE: There is a chance this stock might crash."
+            }
+          ],
+          "adjustRate": 10,
+          "strikeRate": 6,
+          "danger": true
+        },
+        {
+          "ticker": "NIO",
+          "cost": 50.58,
+          "count": 110,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": 45,
+          "strikeRate": null
+        },
+        {
+          "ticker": "GEVO",
+          "cost": 8.21,
+          "count": 250,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": 7,
+          "strikeRate": 5.5
+        },
+        {
+          "ticker": "AMC",
+          "cost": 60.5,
+          "count": 100,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": 40,
+          "strikeRate": 30
+        },
+        {
+          "ticker": "RIOT",
+          "cost": 48.35,
+          "count": 90,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": 30,
+          "strikeRate": 46
+        },
+        {
+          "ticker": "VERU",
+          "cost": 9.58,
+          "count": 40,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": 8.5,
+          "strikeRate": 10.5
+        },
+        {
+          "ticker": "FCEL",
+          "cost": 10.65,
+          "count": 50,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": 8,
+          "strikeRate": 6
+        },
+        {
+          "ticker": "NNOX",
+          "cost": 39.55,
           "count": 20,
           "max": null,
           "min": null,
           "position": true,
           "expires": null,
           "events": [],
-          "adjustRate": null,
-          "strikeRate": null
-        },
-        {
-          "ticker": "BNGO",
-          "cost": 8.037,
-          "count": 300,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 7.5
-        },
-        {
-          "ticker": "CCIV",
-          "cost": 22.5,
-          "count": 150,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 21.5
-        },
-        {
-          "ticker": "CHPT",
-          "cost": 21.52,
-          "count": 150,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 20.5
-        },
-        {
-          "ticker": "GEVO",
-          "cost": 8.367,
-          "count": 150,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 7.5
-        },
+          "adjustRate": 25,
+          "strikeRate": 10.5
+        }
+      ]
+    },
+    {
+      "name": "Robinhood Tony",
+      "owner": "TONY",
+      "code": "RB_TX",
+      "logo": {
+        "url": "/assets/robinhood.png",
+        "height": 30,
+        "width": 30
+      },
+      "stocks": [
         {
           "ticker": "NIO",
-          "cost": 37.838,
-          "count": 150,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 37
-        },
-        {
-          "ticker": "PLTR",
-          "cost": 22.571,
+          "cost": 45.22,
           "count": 70,
           "max": null,
           "min": null,
           "position": true,
           "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 21
+          "adjustRate": 43,
+          "events": []
         },
         {
-          "ticker": "RIOT",
-          "cost": 47.683,
-          "count": 60,
+          "ticker": "BNGO",
+          "cost": 9.09,
+          "count": 302,
+          "max": null,
+          "min": null,
+          "position": true,
+          "adjustRate": 8,
+          "expires": null,
+          "events": []
+        },
+        {
+          "ticker": "PLTR",
+          "cost": 26.53,
+          "count": 95,
           "max": null,
           "min": null,
           "position": true,
           "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 46
+          "adjustRate": 23,
+          "events": []
         },
         {
-          "ticker": "VERU",
-          "cost": 11.339,
-          "count": 20,
+          "ticker": "AMZN",
+          "cost": 3247.65,
+          "count": 0.032639,
           "max": null,
           "min": null,
           "position": true,
           "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 10.5
+          "events": []
+        },
+        {
+          "ticker": "SIRI",
+          "cost": 5.9,
+          "count": 1,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": []
+        }
+      ]
+    },
+    {
+      "name": "Etrade",
+      "owner": "VINEETHA",
+      "code": "ET_VI",
+      "logo": {
+        "url": "/assets/etrade.png",
+        "height": 20,
+        "width": 20
+      },
+      "stocks": [
+        {
+          "ticker": "AVXL",
+          "cost": 16.5,
+          "count": 15,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": []
+        },
+        {
+          "ticker": "BNGO",
+          "cost": 8.0565,
+          "count": 131,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": []
+        },
+        {
+          "ticker": "EVFM",
+          "cost": 2.08,
+          "count": 10,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": []
+        },
+        {
+          "ticker": "NNDM",
+          "cost": 13.3,
+          "count": 50,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": []
+        },
+        {
+          "ticker": "ZOM",
+          "cost": 0.735,
+          "count": 1350,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": []
         }
       ]
     },
@@ -561,6 +710,11 @@
       "name": "Ameritrade",
       "owner": "TONY",
       "code": "AM_TX",
+      "logo": {
+        "url": "/assets/ameritrade.png",
+        "height": 30,
+        "width": 70
+      },
       "stocks": [
         {
           "ticker": "RIOT",
@@ -840,6 +994,11 @@
       "name": "Webull(Email)",
       "owner": "TONY",
       "code": "WE_TX(E)",
+      "logo": {
+        "url": "/assets/webull.png",
+        "height": 40,
+        "width": 40
+      },
       "stocks": [
         {
           "ticker": "BNGO",
@@ -998,6 +1157,11 @@
       "name": "Webull(Mobile)",
       "owner": "TONY",
       "code": "WE_TX(M)",
+      "logo": {
+        "url": "/assets/webull.png",
+        "height": 40,
+        "width": 40
+      },
       "stocks": [
         {
           "ticker": "AVXL",
@@ -1016,6 +1180,11 @@
       "name": "Webull Vineetha",
       "owner": "VINEETHA",
       "code": "WE_VI",
+      "logo": {
+        "url": "/assets/webull.png",
+        "height": 40,
+        "width": 40
+      },
       "stocks": [
         {
           "ticker": "FBIO",
@@ -1051,13 +1220,14 @@
         },
         {
           "ticker": "RIOT",
-          "cost": 52.25,
-          "count": 50,
+          "cost": 53.473,
+          "count": 190,
           "max": null,
           "min": null,
           "position": true,
           "expires": null,
-          "events": []
+          "events": [],
+          "adjustRate": 30
         },
         {
           "ticker": "GNW",
@@ -1083,131 +1253,19 @@
       ]
     },
     {
-      "name": "Robinhood Tony",
-      "owner": "TONY",
-      "code": "RB_TX",
-      "stocks": [
-        {
-          "ticker": "NIO",
-          "cost": 45.22,
-          "count": 70,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "adjustRate": 43,
-          "events": []
-        },
-        {
-          "ticker": "BNGO",
-          "cost": 9.09,
-          "count": 302,
-          "max": null,
-          "min": null,
-          "position": true,
-          "adjustRate": 8,
-          "expires": null,
-          "events": []
-        },
-        {
-          "ticker": "PLTR",
-          "cost": 26.53,
-          "count": 95,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "adjustRate": 23,
-          "events": []
-        },
-        {
-          "ticker": "AMZN",
-          "cost": 3247.65,
-          "count": 0.032639,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": []
-        },
-        {
-          "ticker": "SIRI",
-          "cost": 5.9,
-          "count": 1,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": []
-        }
-      ]
-    },
-    {
       "name": "Robinhood Vineetha",
       "owner": "VINEETHA",
       "code": "RB_VI",
+      "logo": {
+        "url": "/assets/robinhood.png",
+        "height": 30,
+        "width": 30
+      },
       "stocks": [
         {
           "ticker": "AGEN",
           "cost": 3.23,
           "count": 1,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": []
-        }
-      ]
-    },
-    {
-      "name": "Etrade",
-      "owner": "VINEETHA",
-      "code": "ET_VI",
-      "stocks": [
-        {
-          "ticker": "AVXL",
-          "cost": 16.5,
-          "count": 15,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": []
-        },
-        {
-          "ticker": "BNGO",
-          "cost": 8.0565,
-          "count": 131,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": []
-        },
-        {
-          "ticker": "EVFM",
-          "cost": 2.08,
-          "count": 10,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": []
-        },
-        {
-          "ticker": "NNDM",
-          "cost": 13.3,
-          "count": 50,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": []
-        },
-        {
-          "ticker": "ZOM",
-          "cost": 0.735,
-          "count": 1350,
           "max": null,
           "min": null,
           "position": true,

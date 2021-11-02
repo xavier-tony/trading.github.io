@@ -44,6 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // 'max',
     'adjustShares',
     'action',
+    'danger'
   ];
   actionStocks: IStock[] = [];
   constructor(
@@ -214,6 +215,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                         .toFixed(2)
                     : null,
                   totalCost: (s.cost * s.count).toFixed(2),
+                  danger: !!s.danger
                 };
               })
               .sort((s1, s2) => +s2.profit - +s1.profit),

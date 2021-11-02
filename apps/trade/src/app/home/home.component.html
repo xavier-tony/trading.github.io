@@ -81,6 +81,18 @@
       >
         <ng-template mat-tab-label
           ><div class="tab-header">
+            <img
+              *ngIf="trade.logo?.url"
+              [src]="trade.logo?.url"
+              [width]="trade.logo?.width"
+              [height]="trade.logo?.height"
+              class="logo"
+            />
+            <mat-icon
+              *ngIf="trade.logo?.icon"
+              [style.color]="trade.logo?.color"
+              >{{ trade.logo?.icon }}</mat-icon
+            >
             {{ trade.name }}
           </div></ng-template
         >

@@ -44,6 +44,7 @@ export interface IStock {
     description?: string;
     remainingDays?: number;
   };
+  danger?: boolean
 }
 export interface ITrade {
   name: string;

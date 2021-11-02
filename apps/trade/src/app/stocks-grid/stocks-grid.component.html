@@ -11,7 +11,7 @@
       >TICKER
     </mat-header-cell>
     <mat-cell class="grid__ticker" *matCellDef="let row">
-      <div>{{ row.ticker }}</div>
+      <div class="flex"><mat-icon class="red" *ngIf="row.danger">dangerous</mat-icon>{{ row.ticker }}</div>
       <div class="grid-ticker__count">{{ row.count }}</div>
     </mat-cell>
   </ng-container>
