@@ -15,7 +15,7 @@ export class AppComponent {
 
   constructor(public db: AngularFireDatabase, private stockService:StocksService) {
     this.stocks$ = db.list('trade').valueChanges();
-    this.stocks$.subscribe(console.log);
+    this.stocks$.subscribe();
   
   }
 

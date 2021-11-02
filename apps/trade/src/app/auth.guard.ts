@@ -41,7 +41,6 @@ export class AuthGuard implements CanActivate {
       return this.http
         .post('https://api.tdameritrade.com/v1/oauth2/token', formData)
         .pipe(
-          tap((x) => console.log(x)),
           filter((r) => +r['responseStatusCode'] !== 400),
           mapTo(true),
           catchError(() => of(false))

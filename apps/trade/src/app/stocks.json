@@ -1,442 +1,6 @@
 {
   "trade": [
     {
-      "name": "Tomorrow",
-      "owner": "TONY",
-      "code": "TOMORROW",
-      "logo": {
-        "icon": "monetization_on",
-        "height": 30,
-        "width": 30,
-        "color": "#1CCA1A"
-      },
-      "stocks": [
-        {
-          "ticker": "T",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "divident": true,
-          "adjustRate": null,
-          "strikeRate": null
-        },
-        {
-          "ticker": "BGS",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "divident": true,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": null
-        },
-        {
-          "ticker": "FTFT",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "strikeRate": 5
-        },
-        {
-          "ticker": "AITX",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "QCOM",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "MAIN",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "T",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "divident": true,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "CSWC",
-          "cost": null,
-          "count": null,
-          "divident": true,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "RVLV",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "DIS",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "NIO",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "AAPL",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "FB",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "NKE",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "TSLA",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "PLUG",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "FCEL",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "DKNG",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "CHPT",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "APXT",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "DBX",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "AAL",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "WFC",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "GNOG",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "WBA",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "TTCF",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "PLTR",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "IDEX",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "V",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "CRWD",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "SQ",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "BNGO",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "FTFT",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "GNUS",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "ARDX",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": {
-            "date": "04/29/2021"
-          },
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "PLX",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": {
-            "date": "04/27/2021"
-          },
-          "events": [],
-          "adjustRate": null
-        },
-        {
-          "ticker": "COINBASE",
-          "cost": null,
-          "count": null,
-          "max": null,
-          "min": null,
-          "position": true,
-          "expires": null,
-          "events": [],
-          "adjustRate": null,
-          "ipo": {
-            "date": "04/14/2021",
-            "rate": 300,
-            "description": "Coinbase is expected to to have a rate around 300+"
-          }
-        }
-      ]
-    },
-    {
       "name": "Webull Tony IRA",
       "owner": "TONY",
       "code": "WE_TX_IRA",
@@ -449,7 +13,7 @@
         {
           "ticker": "FBIO",
           "cost": 5.63,
-          "count": 600,
+          "count": 200,
           "max": null,
           "min": null,
           "position": true,
@@ -526,7 +90,7 @@
           "position": true,
           "expires": null,
           "events": [],
-          "adjustRate": 40,
+          "adjustRate": 45,
           "strikeRate": 30
         },
         {
@@ -538,7 +102,7 @@
           "position": true,
           "expires": null,
           "events": [],
-          "adjustRate": 30,
+          "adjustRate": 40,
           "strikeRate": 46
         },
         {
@@ -550,19 +114,19 @@
           "position": true,
           "expires": null,
           "events": [],
-          "adjustRate": 8.5,
+          "adjustRate": null,
           "strikeRate": 10.5
         },
         {
           "ticker": "FCEL",
           "cost": 10.65,
-          "count": 50,
+          "count": 1,
           "max": null,
           "min": null,
           "position": true,
           "expires": null,
           "events": [],
-          "adjustRate": 8,
+          "adjustRate": 10.3,
           "strikeRate": 6
         },
         {
@@ -576,6 +140,18 @@
           "events": [],
           "adjustRate": 25,
           "strikeRate": 10.5
+        },
+        {
+          "ticker": "MARA",
+          "cost": 57.2,
+          "count": 10,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 70
         }
       ]
     },
@@ -1543,6 +1119,442 @@
           "longterm": true,
           "position": false,
           "tags": ["sain"]
+        }
+      ]
+    },
+    {
+      "name": "Tomorrow",
+      "owner": "TONY",
+      "code": "TOMORROW",
+      "logo": {
+        "icon": "monetization_on",
+        "height": 30,
+        "width": 30,
+        "color": "#1CCA1A"
+      },
+      "stocks": [
+        {
+          "ticker": "T",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "divident": true,
+          "adjustRate": null,
+          "strikeRate": null
+        },
+        {
+          "ticker": "BGS",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "divident": true,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": null
+        },
+        {
+          "ticker": "FTFT",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "strikeRate": 5
+        },
+        {
+          "ticker": "AITX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "QCOM",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "MAIN",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "T",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "divident": true,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "CSWC",
+          "cost": null,
+          "count": null,
+          "divident": true,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "RVLV",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "DIS",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "NIO",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "AAPL",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "FB",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "NKE",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "TSLA",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "PLUG",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "FCEL",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "DKNG",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "CHPT",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "APXT",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "DBX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "AAL",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "WFC",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "GNOG",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "WBA",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "TTCF",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "PLTR",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "IDEX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "V",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "CRWD",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "SQ",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "BNGO",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "FTFT",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "GNUS",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "ARDX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": {
+            "date": "04/29/2021"
+          },
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "PLX",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": {
+            "date": "04/27/2021"
+          },
+          "events": [],
+          "adjustRate": null
+        },
+        {
+          "ticker": "COINBASE",
+          "cost": null,
+          "count": null,
+          "max": null,
+          "min": null,
+          "position": true,
+          "expires": null,
+          "events": [],
+          "adjustRate": null,
+          "ipo": {
+            "date": "04/14/2021",
+            "rate": 300,
+            "description": "Coinbase is expected to to have a rate around 300+"
+          }
         }
       ]
     }

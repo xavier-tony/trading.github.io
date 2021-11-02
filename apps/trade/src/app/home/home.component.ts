@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     // 'max',
     'adjustShares',
     'action',
-    'danger'
   ];
   actionStocks: IStock[] = [];
   constructor(
@@ -58,11 +57,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     // this.stocks$ = this.db.list<ITrade>('trade').valueChanges();
     this.stocks$ = of(trade);
 
-    this.trade$ = timer(1, 2000).pipe(
-      // tap(() => (this.actionStocks = [])),
+    this.trade$ = timer(1, 20000).pipe(
       switchMap(() => this.stocks$),
       switchMap((trade) => this.getStocks(trade)),
-      tap(() => console.log(this.actionStocks)),
       retry(),
       share(),
       takeUntil(this.stopPolling)
@@ -71,7 +68,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.stocksService.openSidenav$
       .asObservable()
       .pipe(
-        tap(console.log),
         tap((x) => (this.openSidenav = x))
       )
       .subscribe();
@@ -152,7 +148,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onDeleteStock(stock: IStock, platform: string) {
-    console.log(stock);
     this.stocks$.pipe(first()).subscribe((stocks) => {
       const st = stocks.find((s) => s.name === stock.tradeName);
       st.stocks = st.stocks.filter((sto) => sto.ticker !== stock.ticker);
@@ -215,7 +210,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                         .toFixed(2)
                     : null,
                   totalCost: (s.cost * s.count).toFixed(2),
-                  danger: !!s.danger
+                  danger: !!s.danger,
                 };
               })
               .sort((s1, s2) => +s2.profit - +s1.profit),

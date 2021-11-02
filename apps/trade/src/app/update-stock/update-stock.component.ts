@@ -17,15 +17,12 @@ import { ActionComponent } from '../action/action.component';
   styleUrls: ['./update-stock.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UpdateStockComponent implements OnInit {
+export class UpdateStockComponent {
   constructor(
     private _bottomSheetRef: MatBottomSheetRef<ActionComponent>,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
     public db: AngularFireDatabase
   ) {}
-  ngOnInit(): void {
-    console.log(this.data);
-  }
 
   addNewTrade(code: string, name: string, owner: string) {
     const tradeRef = this.db.list('trade');
@@ -37,6 +34,6 @@ export class UpdateStockComponent implements OnInit {
   }
 
   updateStock(code: string, name: string, count: string) {
-    
+    // nothing
   }
 }

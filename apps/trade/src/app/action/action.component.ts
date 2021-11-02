@@ -10,15 +10,13 @@ import {
   templateUrl: './action.component.html',
   styleUrls: ['./action.component.scss'],
 })
-export class ActionComponent implements OnInit {
+export class ActionComponent {
   constructor(
     private _bottomSheetRef: MatBottomSheetRef<ActionComponent>,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
     public db: AngularFireDatabase
   ) {}
-  ngOnInit(): void {
-    console.log(this.data);
-  }
+
 
   addNewTrade(code: string, name: string, owner: string) {
     const tradeRef = this.db.list('trade');

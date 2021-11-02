@@ -26,7 +26,8 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "deploy": "ng deploy --base-href=trading"
+    "deploy1": "ng deploy --base-href=trading",
+    "deploy": "npm run build && cd dist && surge ./ my-stocks.surge.sh"
   },
   "private": true,
   "dependencies": {

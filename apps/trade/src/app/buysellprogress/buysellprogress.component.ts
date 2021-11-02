@@ -24,6 +24,5 @@ export class BuySellProgressComponent implements OnChanges {
     this.percent = (100 * value) / max;
     if (this.percent > 50) this.color = 'primary';
     else this.color = 'warn';
-    console.log(max, value, this.percent);
   }
 }
