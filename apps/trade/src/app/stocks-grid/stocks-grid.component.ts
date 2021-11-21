@@ -39,8 +39,11 @@ export class StocksGridComponent implements AfterViewInit, OnChanges {
   @Input() displayedColumns: string[];
   @Input() trade: ITrade;
   @ViewChild(MatSort) sort: MatSort;
-  @Output() moveToWatchListEvent = new EventEmitter();
-  @Output() deleteEvent = new EventEmitter();
+  @Output() moveEvent = new EventEmitter();
+  @Output() deleteEvent = new EventEmitter<{
+    stock: IStock;
+    tradeId: string;
+  }>();
   @Output() editEvent = new EventEmitter();
   @Output() addEvent = new EventEmitter();
   dataSource;
@@ -55,22 +58,22 @@ export class StocksGridComponent implements AfterViewInit, OnChanges {
   }
 
   add(e: MouseEvent) {
-    this.addEvent.emit();
+    this.addEvent.emit(this.trade.id);
     e.stopPropagation();
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   trackByStock = (index, stock: IStock) => index;
 
-  moveToWatchList(stock: IStock) {
-    this.moveToWatchListEvent.emit(stock);
+  move(stock: IStock, to: string) {
+    this.moveEvent.emit({ stock, tradeId: this.trade.id, to });
   }
 
   delete(stock: IStock) {
-    this.deleteEvent.emit(stock);
+    this.deleteEvent.emit({ stock, tradeId: this.trade.id });
   }
 
   edit(stock: IStock) {
-    this.editEvent.emit(stock);
+    this.editEvent.emit({ stock, tradeId: this.trade.id });
   }
 }

@@ -2,15 +2,67 @@
   <h2 class="update__header">Add Stock</h2>
   <mat-form-field class="padd__15">
     <mat-label>Ticker</mat-label>
-    <input #code matInput placeholder="Code" autocomplete="off" />
+    <input
+      #ticker
+      matInput
+      placeholder="Ticker"
+      autocomplete="off"
+      [value]="
+        stockToUpdate
+          ? (stockToUpdate?.ticker | uppercase)
+          : (ticker.value | uppercase)
+      "
+    />
   </mat-form-field>
   <mat-form-field class="padd__15">
     <mat-label>Cost</mat-label>
-    <input #name matInput placeholder="Name" autocomplete="off" />
+    <input
+      #cost
+      matInput
+      placeholder="Cost"
+      autocomplete="off"
+      [value]="stockToUpdate?.cost"
+    />
   </mat-form-field>
   <mat-form-field class="padd__15">
     <mat-label>Count</mat-label>
-    <input #count matInput placeholder="Owner" autocomplete="off" />
+    <input
+      #count
+      matInput
+      placeholder="Count"
+      autocomplete="off"
+      [value]="stockToUpdate?.count"
+    />
+  </mat-form-field>
+  <mat-form-field class="padd__15">
+    <mat-label>Adjust Rate</mat-label>
+    <input
+      #adjustRate
+      matInput
+      placeholder="Adjust Rate"
+      autocomplete="off"
+      [value]="stockToUpdate?.adjustRate || null"
+    />
+  </mat-form-field>
+  <mat-form-field class="padd__15">
+    <mat-label>Strike Rate</mat-label>
+    <input
+      #strikeRate
+      matInput
+      placeholder="Strike Rate"
+      autocomplete="off"
+      [value]="stockToUpdate?.strikeRate || null"
+    />
+  </mat-form-field>
+  <mat-form-field class="padd__15">
+    <mat-label>Sell Rate</mat-label>
+    <input
+      #sellRate
+      matInput
+      placeholder="Count"
+      autocomplete="off"
+      [value]="stockToUpdate?.sellRate || null"
+    />
   </mat-form-field>
   <mat-form-field appearance="fill" class="padd__15">
     <mat-label>Expires</mat-label>
@@ -24,8 +76,18 @@
     mat-raised-button
     color="primary"
     class="trade__button padd__15"
-    (click)="updateStock(code.value, name.value, count.value)"
+    (click)="
+      updateStock(
+        ticker.value,
+        count.value,
+        cost.value,
+        adjustRate.value,
+        strikeRate.value,
+        sellRate.value
+      );
+      $event.preventDefault()
+    "
   >
-    Add
+    {{ data?.action }}
   </button>
 </form>

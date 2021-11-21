@@ -8,6 +8,7 @@ import {
 import { Observable, of, Subject, timer } from 'rxjs';
 import {
   catchError,
+  filter,
   first,
   map,
   retry,
@@ -21,6 +22,7 @@ import { StocksService } from '../stocks.service';
 import { UpdateStockComponent } from '../update-stock/update-stock.component';
 import { IResponse, IStock, ITrade } from './trade.interface';
 import { trade } from '../stocks.json';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'money-home',
@@ -49,27 +51,38 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     private http: HttpClient,
     private stocksService: StocksService,
-    public db: AngularFireDatabase,
-    private bottomSheet: MatBottomSheet
+    private bottomSheet: MatBottomSheet,
+    private store: AngularFirestore
   ) {}
 
   ngOnInit() {
     // this.stocks$ = this.db.list<ITrade>('trade').valueChanges();
-    this.stocks$ = of(trade);
+    // this.stocks$ = of(trade);
+    this.stocks$ = this.store
+      .collection('trade')
+      .valueChanges({ idField: 'id' })
+      .pipe(tap(console.log)) as Observable<ITrade[]>;
 
-    this.trade$ = timer(1, 20000).pipe(
-      switchMap(() => this.stocks$),
-      switchMap((trade) => this.getStocks(trade)),
+    this.trade$ = this.stocks$.pipe(
+      switchMap((trade) =>
+        timer(1, 5000).pipe(switchMap(() => this.getStocks(trade)))
+      ),
       retry(),
       share(),
       takeUntil(this.stopPolling)
     );
 
+    // this.trade$ = timer(1, 20000).pipe(
+    //   switchMap(() => this.stocks$),
+    //   switchMap((trade) => this.getStocks(trade)),
+    //   retry(),
+    //   share(),
+    //   takeUntil(this.stopPolling)
+    // );
+
     this.stocksService.openSidenav$
       .asObservable()
-      .pipe(
-        tap((x) => (this.openSidenav = x))
-      )
+      .pipe(tap((x) => (this.openSidenav = x)))
       .subscribe();
 
     this.stocksService.addNewTrade$
@@ -94,13 +107,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   addNewTrade() {
-    const bottomSheetConfig: MatBottomSheetConfig = {
-      autoFocus: true,
-      data: {
-        tradeRef: this.db.list('trade'),
-      },
-    };
-    this.bottomSheet.open(ActionComponent, bottomSheetConfig);
+    // const bottomSheetConfig: MatBottomSheetConfig = {
+    //   autoFocus: true,
+    //   data: {
+    //     tradeRef: this.db.list('trade'),
+    //   },
+    // };
+    // this.bottomSheet.open(ActionComponent, bottomSheetConfig);
     // const trade: ITrade = {
     //   code: 'Pennies',
     //   name: 'PENNY',
@@ -111,48 +124,63 @@ export class HomeComponent implements OnInit, OnDestroy {
     // tradeRef.push(trade);
   }
 
-  onAddStock(stock: Partial<IStock>) {
+  onAddStock(tradeId: string) {
     const bottomSheetConfig: MatBottomSheetConfig = {
       autoFocus: true,
       data: {
-        tradeRef: this.db.list('trade'),
-        stock: stock,
+        trade$: this.stocks$,
         action: 'ADD',
+        tradeId,
       },
     };
     this.bottomSheet.open(UpdateStockComponent, bottomSheetConfig);
   }
 
-  onEditStock(stock: Partial<IStock>) {
+  onEditStock({ stock, tradeId }) {
     const bottomSheetConfig: MatBottomSheetConfig = {
       autoFocus: true,
       data: {
-        tradeRef: this.db.list('trade'),
+        trade$: this.stocks$,
         stock: stock,
-        action: 'EDIT',
+        action: 'UPDATE',
+        tradeId,
       },
     };
     this.bottomSheet.open(UpdateStockComponent, bottomSheetConfig);
   }
 
-  onMoveToWatchList(stock: Partial<IStock>) {
+  onMoveToWatchList({ stock, tradeId, to }) {
     const bottomSheetConfig: MatBottomSheetConfig = {
       autoFocus: true,
       data: {
-        tradeRef: this.db.list('trade'),
+        trade$: this.stocks$,
         stock: stock,
         action: 'MOVE',
+        tradeId,
+        to,
       },
     };
     this.bottomSheet.open(UpdateStockComponent, bottomSheetConfig);
   }
 
-  onDeleteStock(stock: IStock, platform: string) {
-    this.stocks$.pipe(first()).subscribe((stocks) => {
-      const st = stocks.find((s) => s.name === stock.tradeName);
-      st.stocks = st.stocks.filter((sto) => sto.ticker !== stock.ticker);
-      this.db.list('trade').update(st, { stocks: st.stocks });
-    });
+  onDeleteStock({ stock, tradeId }) {
+    this.stocks$
+      .pipe(
+        map((t) => t.find((t1) => t1.id === tradeId)),
+        tap((trade: ITrade) => {
+          this.store
+            .collection('trade')
+            .doc(trade.id)
+            .set({
+              ...trade,
+              stocks: [
+                ...trade.stocks.filter((st) => st.ticker !== stock.ticker),
+              ],
+            });
+        }),
+        first()
+      )
+      .subscribe();
   }
 
   getStocks(trade: ITrade[]) {
@@ -193,8 +221,14 @@ export class HomeComponent implements OnInit, OnDestroy {
             ...tr,
             stocks: tr.stocks
               .map((s) => {
-                if (s.lastPrice <= s.strikeRate) this.addStrikeStocks(s);
-                if (s.lastPrice >= s.sellRate) this.addSellStocks(s);
+                if (
+                  s.strikeRate &&
+                  s.strikeRate > 0 &&
+                  s.lastPrice <= s.strikeRate
+                )
+                  this.addStrikeStocks(s);
+                if (s.sellRate && s.sellRate > 0 && s.lastPrice >= s.sellRate)
+                  this.addSellStocks(s);
                 this.addDeadline(s);
                 this.addIpo(s);
                 return {

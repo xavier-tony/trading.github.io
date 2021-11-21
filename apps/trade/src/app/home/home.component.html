@@ -51,10 +51,10 @@
           </button>
         </div>
         <div class="action__container">
-          <button color="warn" mat-flat-button *ngIf="actionStock.strike">
+          <button color="warn" mat-button *ngIf="actionStock.strike">
             BUY < {{ actionStock.strikeRate }}
           </button>
-          <button mat-stroked-flat color="primary" *ngIf="actionStock.sell">
+          <button mat-button color="primary" *ngIf="actionStock.sell">
             SELL > {{ actionStock.sellRate }}
           </button>
         </div>
@@ -100,7 +100,7 @@
           <money-stocks-grid
             [trade]="trade"
             [displayedColumns]="displayedColumns"
-            (moveToWatchListEvent)="onMoveToWatchList($event)"
+            (moveToWatchListEvent)="onMove($event)"
             (deleteEvent)="onDeleteStock($event)"
             (editEvent)="onEditStock($event)"
             (addEvent)="onAddStock($event)"
